@@ -7,7 +7,7 @@ function MainLayout({ children }) {
 
       <Header/>
 
-      <main className="flex-grow p-4">
+      <main className="flex-grow p-16">
         {children}
       </main>
 
