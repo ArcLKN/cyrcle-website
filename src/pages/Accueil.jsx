@@ -6,9 +6,24 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { Link } from 'react-router-dom'
 
 function Accueil() {
+
+  	const profileImages = import.meta.glob('/src/assets/image *.png', { eager: true });
+	const profileImageList = Object.values(profileImages);
+	const profilesInfo = [
+		{ name: 'Lou', role: 'Présidente', image: profileImageList[0] },
+		{ name: 'Appoline Boiselle', role: 'Secrétariat Général', image: profileImageList[1] },
+		{ name: 'Mathis Dufal', role: 'Responsable Trésorerie', image: profileImageList[2] },
+		{ name: 'Mahdi Jaafar', role: 'Responsable Développement commercial', image: profileImageList[3] },
+		{ name: 'Sophie Mereyde', role: 'Responsable Ressources Humaines', image: profileImageList[4] },
+		{ name: 'Bastien Meunier', role: 'Responsable Chargé \'Affaires', image: profileImageList[5] },
+		{ name: 'N\'Gnima Coulibaly', role: 'Responsable Qualité', image: profileImageList[6] },
+		{ name: 'Adrien Wilmart', role: 'Responsable Technique', image: profileImageList[7] },
+		{ name: 'Aymène Ben Mohamed', role: 'Responsable Communication', image: profileImageList[8] }
+	]
+
     return (
       <div className='relative'>
-			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none h-250 w-auto absolute -translate-x-16 -translate-y-64 animate-pulse" />
+			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none h-250 w-auto absolute -translate-x-16 -translate-y-64 animate-spin" />
         <div className="flex flex-col font-manrope px-8 space-y-12">
           <div className='flex items-center'>
             <h1 className="text-9xl">CYRCLE</h1>
@@ -79,7 +94,7 @@ function Accueil() {
             <CarouselItem className="basis-1/4"></CarouselItem>
           </CarouselContent>
         </Carousel>
-        <div className='flex items-center my-64 space-x-12'>
+        <div className='flex items-center mt-64 mb-32 space-x-12'>
           <div className='flex flex-col'>
             <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">LA TEAM</Link>
             <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">NOTRE ESPRIT</Link>
@@ -87,6 +102,15 @@ function Accueil() {
           <h1 className="text-9xl font-manrope">NOUS DÉCOUVRIR</h1>
           <span className="ml-10 align-middle w-96 h-[3px] bg-foreground translate-x-24" />
         </div>
+		<div className='grid grid-cols-4 gap-4 items-center justify-items-center'>
+			{profilesInfo.map((infos, index) => (
+				<div key={index} className="group relative w-64 h-auto overflow-hidden hover:border-background transition-all duration-500">
+					<img src={infos.image.default} alt={`Image ${index}`} className="mb-4 w-full h-full object-cover transition-all duration-500 group-hover:scale-110" />
+					<p className="font-manrope text-2xl font-extralight">{infos.name}</p>
+					<p className="opacity-50 font-manrope text-m font-extralight">{infos.role}</p>
+				</div>
+			))}
+		</div>
       </div>
     )
   }
