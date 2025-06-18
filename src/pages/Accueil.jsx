@@ -23,7 +23,7 @@ function Accueil() {
 
     return (
       <div className='relative'>
-			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none h-250 w-auto absolute -translate-x-16 -translate-y-64 animate-custom-rotate animation-delay:0s" />
+			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none h-300 w-auto absolute -translate-x-52 -translate-y-112 animate-custom-rotate" />
         <div className="flex flex-col font-manrope px-8 space-y-12">
           <div className='flex items-center'>
             <h1 className="text-9xl">CYRCLE</h1>
@@ -32,7 +32,7 @@ function Accueil() {
           <h1 className="text-9xl justify-end text-right">THE POWER OF</h1>
           <h1 className="text-9xl justify-end text-right">DESIGN</h1>
         </div>
-			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none h-250 w-auto absolute translate-x-300 -translate-y-72  animate-custom-rotate [animation-delay:7s]" />
+			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none h-300 w-auto absolute translate-x-264 -translate-y-132  animate-custom-rotate [animation-delay:5s]" />
         <Separator className="!h-0.25 bg-foreground mb-6 mt-24" />
         <div className='flex justify-between'>
           <p>cy école de design</p>
@@ -41,15 +41,14 @@ function Accueil() {
             <p>saint-germain-en-laye</p>
           </div>
         </div>
-			  <img src={doubleDown} alt="doubleDown" className="mx-auto pointer-events-none h-12 w-12 animate-bounce" />
-			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none absolute h-250 w-auto -translate-x-32" />
+		<img src={doubleDown} alt="doubleDown" className="mx-auto pointer-events-none h-12 w-12 animate-bounce" />
         <div className="flex flex-row items-center my-64 space-x-12">
           <span className="ml-10 align-middle w-48 h-[3px] bg-foreground -translate-x-20" />
           <h1 className="text-9xl font-manrope">PRESTATIONS</h1>
           <div className='flex flex-col'>
-            <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">DESIGN</Link>
-            <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">INFORMATIQUE</Link>
-            <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">ÉVÉNEMENTIEL</Link>
+            <Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">DESIGN</Link>
+            <Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">INFORMATIQUE</Link>
+            <Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">ÉVÉNEMENTIEL</Link>
           </div>
         </div>
         <Carousel className="-translate-x-32 w-[125%]">
@@ -94,10 +93,11 @@ function Accueil() {
             <CarouselItem className="basis-1/4"></CarouselItem>
           </CarouselContent>
         </Carousel>
+		<img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none absolute h-300 w-auto -right-0 translate-x-92 -translate-y-32  animate-custom-rotate [animation-delay:9s]" />
         <div className='flex items-center mt-64 mb-32 space-x-12'>
           <div className='flex flex-col'>
-            <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">LA TEAM</Link>
-            <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">NOTRE ESPRIT</Link>
+            <Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">LA TEAM</Link>
+            <Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">NOTRE ESPRIT</Link>
           </div>
           <h1 className="text-9xl font-manrope">NOUS DÉCOUVRIR</h1>
           <span className="ml-10 align-middle w-96 h-[3px] bg-foreground translate-x-24" />
