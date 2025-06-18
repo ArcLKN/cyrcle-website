@@ -3,6 +3,7 @@ import doubleDown from '../assets/Double Down.png'
 import { Separator } from "@/components/ui/separator"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Link } from 'react-router-dom'
 
 function Accueil() {
     return (
@@ -28,13 +29,13 @@ function Accueil() {
 			  <img src={doubleDown} alt="doubleDown" className="mx-auto pointer-events-none h-12 w-12 animate-bounce" />
 			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none absolute h-250 w-auto -translate-x-32" />
         <div className="flex flex-row items-center my-64 space-x-12">
-            <span className="ml-10 align-middle w-48 h-[3px] bg-foreground -translate-x-20" />
-            <h1 className="text-9xl font-manrope">PRESTATIONS</h1>
-            <div>
-              <p>DESIGN</p>
-              <p>INFORMATIQUE</p>
-              <p>ÉVÉNEMENTIEL</p>
-            </div>
+          <span className="ml-10 align-middle w-48 h-[3px] bg-foreground -translate-x-20" />
+          <h1 className="text-9xl font-manrope">PRESTATIONS</h1>
+          <div className='flex flex-col'>
+            <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">DESIGN</Link>
+            <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">INFORMATIQUE</Link>
+            <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">ÉVÉNEMENTIEL</Link>
+          </div>
         </div>
         <Carousel className="-translate-x-32 w-[125%]">
           <CarouselContent className="ml-32 mr-32">
@@ -78,6 +79,14 @@ function Accueil() {
             <CarouselItem className="basis-1/4"></CarouselItem>
           </CarouselContent>
         </Carousel>
+        <div className='flex items-center my-64 space-x-12'>
+          <div className='flex flex-col'>
+            <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">LA TEAM</Link>
+            <Link to="/" className="opacity-50 hover:opacity-100 transition-all duration-300">NOTRE ESPRIT</Link>
+          </div>
+          <h1 className="text-9xl font-manrope">NOUS DÉCOUVRIR</h1>
+          <span className="ml-10 align-middle w-96 h-[3px] bg-foreground translate-x-24" />
+        </div>
       </div>
     )
   }
