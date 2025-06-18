@@ -44,6 +44,31 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --font-montserrat: "Montserrat", sans-serif;
   --font-manrope: "Manrope", sans-serif; 
+
+  --animate-custom-rotate: custom-rotate 15s ease-in-out infinite;
+  @keyframes custom-rotate {
+    0% {
+      transform: rotate(0deg);
+    },
+    10% {
+      transform: rotate(-7deg);
+    }
+    32%,
+    42% {
+      transform: rotate(82deg);
+    }
+    54%,
+    64% {
+      transform: rotate(172deg);
+    }
+    76%,
+    86% {
+      transform: rotate(-97deg);
+    }
+    100% {
+      transform: rotate(-7deg);
+    }
+  }
 }
 
 :root {
