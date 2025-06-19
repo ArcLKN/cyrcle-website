@@ -32,7 +32,7 @@ function Accueil() {
           <h1 className="text-9xl justify-end text-right">THE POWER OF</h1>
           <h1 className="text-9xl justify-end text-right">DESIGN</h1>
         </div>
-			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none h-300 w-auto absolute translate-x-264 -translate-y-132  animate-custom-rotate [animation-delay:5s]" />
+			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none h-300 w-auto absolute right-0 translate-x-80 -translate-y-126  animate-custom-rotate [animation-delay:5s]" />
         <Separator className="!h-0.25 bg-foreground mb-6 mt-24" />
         <div className='flex justify-between'>
           <p>cy école de design</p>
