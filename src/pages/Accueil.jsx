@@ -23,7 +23,7 @@ function Accueil() {
 
     return (
       <div className='relative'>
-			  <img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none h-300 w-auto absolute -translate-x-52 -translate-y-112 animate-custom-rotate" />
+			<img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none h-300 w-auto absolute -translate-x-52 -translate-y-112 animate-custom-rotate" />
         <div className="flex flex-col font-manrope px-8 space-y-12">
           <div className='flex items-center'>
             <h1 className="text-9xl">CYRCLE</h1>
@@ -41,67 +41,67 @@ function Accueil() {
             <p>saint-germain-en-laye</p>
           </div>
         </div>
-		<img src={doubleDown} alt="doubleDown" className="mx-auto pointer-events-none h-12 w-12 animate-bounce" />
-        <div className="flex flex-row items-center my-64 space-x-12">
-          <span className="ml-10 align-middle w-48 h-[3px] bg-foreground -translate-x-20" />
-          <h1 className="text-9xl font-manrope">PRESTATIONS</h1>
-          <div className='flex flex-col'>
-            <Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">DESIGN</Link>
-            <Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">INFORMATIQUE</Link>
-            <Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">ÉVÉNEMENTIEL</Link>
-          </div>
-        </div>
-        <Carousel className="-translate-x-32 w-[125%]">
-          <CarouselContent className="ml-32 mr-32">
-              <CarouselItem key={0} className="basis-1/4">
-                <div className="group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500">
-                  <div className="absolute top-1/2 flex flex-col items-center">
-                    <div className="w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500" />
-                    <span className="absolute h-0.5 left-1/2 w-74 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500" />
-                    <p className="mt-2 text-center group-hover:text-background transition-all duration-500">Identité de marque</p>
-                  </div>
-                </div>
-              </CarouselItem>
-            {[
-              "Identité de marque",
-              "Développement web",
-              "Stratégie d'expérience",
-              "Stratégie d'espace",
-              "Stratégie Événementiel",
-              "Workshop",
-              "Data management",
-            ].map((label, index) => (
-              <CarouselItem key={index+1} className="basis-1/4">
-                <div className="group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500">
-                  <div className="absolute top-1/2 flex flex-col items-center">
-                    <div className="w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500" />
-                    <span className="absolute h-0.5 w-148 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500" />
-                    <p className="mt-2 text-center group-hover:text-background transition-all duration-500">{label}</p>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-            <CarouselItem key={9} className="basis-1/4">
-              <div className="group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500">
-                <div className="absolute top-1/2 flex flex-col items-center">
-                  <div className="w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500" />
-                  <span className="absolute h-0.5 right-1/2 w-74 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500" />
-                  <p className="mt-2 text-center group-hover:text-background transition-all duration-500">Design Industriel</p>
-                </div>
-              </div>
-            </CarouselItem>
-            <CarouselItem className="basis-1/4"></CarouselItem>
-          </CarouselContent>
-        </Carousel>
+	<img src={doubleDown} alt="doubleDown" className="mx-auto pointer-events-none h-12 w-12 animate-bounce" />
+	<div className="flex flex-row items-center my-42 space-x-12">
+		<span className="ml-10 align-middle w-48 h-[3px] bg-foreground -translate-x-20" />
+		<h1 className="text-9xl font-manrope">PRESTATIONS</h1>
+		<div className='flex flex-col'>
+			<Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">DESIGN</Link>
+			<Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">INFORMATIQUE</Link>
+			<Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">ÉVÉNEMENTIEL</Link>
+		</div>
+	</div>
+	<Carousel className="-translate-x-32 w-[125%]">
+		<CarouselContent className="ml-32 mr-32">
+			<CarouselItem key={0} className="basis-1/4">
+			<div className="group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500">
+				<div className="absolute top-1/2 flex flex-col items-center">
+				<div className="w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500" />
+				<span className="absolute h-0.5 left-1/2 w-74 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500" />
+				<p className="mt-2 text-center group-hover:text-background transition-all duration-500">Identité de marque</p>
+				</div>
+			</div>
+			</CarouselItem>
+		{[
+			"Identité de marque",
+			"Développement web",
+			"Stratégie d'expérience",
+			"Stratégie d'espace",
+			"Stratégie Événementiel",
+			"Workshop",
+			"Data management",
+		].map((label, index) => (
+			<CarouselItem key={index+1} className="basis-1/4">
+			<div className="group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500">
+				<div className="absolute top-1/2 flex flex-col items-center">
+				<div className="w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500" />
+				<span className="absolute h-0.5 w-148 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500" />
+				<p className="mt-2 text-center group-hover:text-background transition-all duration-500">{label}</p>
+				</div>
+			</div>
+			</CarouselItem>
+		))}
+		<CarouselItem key={9} className="basis-1/4">
+			<div className="group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500">
+			<div className="absolute top-1/2 flex flex-col items-center">
+				<div className="w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500" />
+				<span className="absolute h-0.5 right-1/2 w-74 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500" />
+				<p className="mt-2 text-center group-hover:text-background transition-all duration-500">Design Industriel</p>
+			</div>
+			</div>
+		</CarouselItem>
+		<CarouselItem className="basis-1/4"></CarouselItem>
+		</CarouselContent>
+	</Carousel>
 		<img src={cercleBlanc} alt="Cercle blanc" className="pointer-events-none absolute h-300 w-auto -right-0 translate-x-92 -translate-y-32  animate-custom-rotate [animation-delay:9s]" />
-        <div className='flex items-center mt-64 mb-32 space-x-12'>
-          <div className='flex flex-col'>
-            <Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">LA TEAM</Link>
-            <Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">NOTRE ESPRIT</Link>
-          </div>
-          <h1 className="text-9xl font-manrope">NOUS DÉCOUVRIR</h1>
-          <span className="ml-10 align-middle w-96 h-[3px] bg-foreground translate-x-24" />
-        </div>
+	<div className='flex items-center mt-42 mb-32 space-x-12'>
+		<div className='flex flex-col'>
+		<Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">LA TEAM</Link>
+		<Link to="/" className="opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300">NOTRE ESPRIT</Link>
+		</div>
+		<h1 className="text-9xl font-manrope">NOUS DÉCOUVRIR</h1>
+		<span className="ml-10 align-middle w-96 h-[3px] bg-foreground translate-x-24" />
+	</div>
 		<div className='grid grid-cols-4 gap-4 items-center justify-items-center'>
 			{profilesInfo.map((infos, index) => (
 				<div key={index} className="group relative w-64 h-auto overflow-hidden hover:border-background transition-all duration-500">
@@ -111,7 +111,7 @@ function Accueil() {
 				</div>
 			))}
 		</div>
-      </div>
+		</div>
     )
   }
   
