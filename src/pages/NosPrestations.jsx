@@ -38,10 +38,14 @@ function NosPrestations() {
 		{
 			title: "IDENTITÉ DE MARQUE",
 			skills: ["Typographie", "Graphisme", "Adobe", "Branding", "Figma"],
+			description:
+				"Nous vous accompagnons dans la création et le développement de l'identité de votre marque, reflétant votre personnalité et votre connexion au monde",
 		},
 		{
 			title: "DÉVELOPPEMENT WEB",
 			skills: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+			description:
+				"Nous mettons en œuvre nos compétences en informatique et en design, alliant créativité et fonctionnalité, au service du site web de votre entreprise.",
 		},
 		{
 			title: "STRATÉGIE D'EXPÉRIENCE",
@@ -54,6 +58,8 @@ function NosPrestations() {
 				"Benchmark",
 				"Storyboard",
 			],
+			description:
+				"Nous vous assistons dans la recherche et l'optimisation de l'expérience utilisateur, pour ainsi développer la solution la plus pertinente face aux enjeux de vos clients.",
 		},
 		{
 			title: "DESIGN D'ESPACE",
@@ -64,6 +70,8 @@ function NosPrestations() {
 				"Rhino 3D",
 				"Signalétique",
 			],
+			description:
+				"Nous vous aidons à imaginer des espaces qui favorisent les interactions et enrichissent la vie quotidienne des utilisateurs.",
 		},
 		{
 			title: "DESIGN ÉVÉNEMENTIEL",
@@ -74,6 +82,8 @@ function NosPrestations() {
 				"Signalétique",
 				"Scénographie",
 			],
+			description:
+				"Nous vous épaulons dans la conception et la gestion de vos événements pour garantir une expérience immersive et marquante pour les utilisateurs.",
 		},
 		{
 			title: "WORKSHOP",
@@ -84,6 +94,8 @@ function NosPrestations() {
 				"Intelligence Collective",
 				"Management interculturel",
 			],
+			description:
+				"Nous organisons des ateliers de workshop en interne pour dévoiler à votre équipe le pouvoir du design.",
 		},
 		{
 			title: "DATA MANAGEMENT",
@@ -94,6 +106,8 @@ function NosPrestations() {
 				"Visualisation",
 				"Gestion de bases de données",
 			],
+			description:
+				"Nous proposons des services de tri et d'organisation de données, pour des bases de données fiables et plus accessibles.",
 		},
 	];
 	const renderPrestations = () => {
@@ -185,14 +199,14 @@ function NosPrestations() {
 						flippedIndex === index ? "rotate-y-0" : "rotate-y-180"
 					}`}
 				>
-					<div className='mt-54 mb-18'>
+					<div className='mt-46 mb-18'>
 						<img
 							src={cercleBlanc}
 							alt='Cercle blanc'
 							className='pointer-events-none h-124 w-auto absolute -translate-x-58 -translate-y-78'
 						/>
-						<div className='flex items-center space-x-8 justify-between'>
-							<div className='flex flex-col items-start w-52 space-y-4'>
+						<div className='flex items-center space-x-16 justify-between'>
+							<div className='flex flex-col items-start w-52 space-y-8'>
 								<span className='align-middle w-full h-[3px] bg-foreground' />
 								<h1 className='text-3xl font-manrope font-light'>
 									{prestation.title}
@@ -201,11 +215,11 @@ function NosPrestations() {
 							<img
 								src={cercleBlanc}
 								alt='Cercle blanc'
-								className='pointer-events-none h-136 w-auto absolute -translate-x-58 translate-y-64'
+								className='pointer-events-none h-136 w-auto absolute -translate-x-38 translate-y-64'
 							/>
 							<span className='align-middle h-64 w-[1px] bg-foreground opacity-50' />
-							<div className='flex flex-col space-y-4'>
-								<p className='text-lg font-manrope font-light'>
+							<div className='flex flex-col space-y-8 w-full'>
+								<p className='text-lg font-manrope font-light max-w-2xl'>
 									{prestation.description}
 								</p>
 								<div className='flex space-x-12 items-center'>
@@ -224,7 +238,7 @@ function NosPrestations() {
 								<img
 									src={prestation.image}
 									alt={prestation.title}
-									className='w-64 h-auto object-cover rounded-lg shadow-lg'
+									className='absolute right-0 w-156 h-auto object-cover rounded-lg shadow-lg'
 								/>
 							)}
 						</div>
