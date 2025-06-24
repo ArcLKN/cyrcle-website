@@ -1,12 +1,17 @@
 import { useRef, useState } from "react";
+import { useTheme } from "@/components/theme-provider";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import cercleBlanc from "../assets/cercle blanc.png";
+import cercleNoir from "../assets/cercle noir.png";
 import doubleDown from "../assets/Double Down.png";
 import { Link } from "react-router-dom";
 import image_design_industriel from "../assets/image_design_industriel.png";
 
 function NosPrestations() {
+	const { theme, setTheme } = useTheme();
+	const cercle = theme === "light" ? cercleNoir : cercleBlanc;
+
 	const prestationRefs = useRef([]);
 
 	const scrollToNext = (index) => {
@@ -125,7 +130,7 @@ function NosPrestations() {
 				>
 					<div className='mt-54 mb-18'>
 						<img
-							src={cercleBlanc}
+							src={cercle}
 							alt='Cercle blanc'
 							className='pointer-events-none h-300 w-auto absolute -translate-x-52 -translate-y-122'
 						/>
