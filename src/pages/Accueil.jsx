@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Accueil() {
 	const { theme, setTheme } = useTheme();
@@ -61,6 +62,17 @@ function Accueil() {
 			role: "Responsable Communication",
 			image: profileImageList[8],
 		},
+	];
+
+	const sectionIds = [
+		"identite_de_marque",
+		"developpement_web",
+		"strategie_experience",
+		"design_espace",
+		"strategie_evenementiel",
+		"workshop",
+		"data_management",
+		"design_industriel",
 	];
 
 	return (
@@ -125,47 +137,64 @@ function Accueil() {
 			<Carousel className='-translate-x-32 w-[125%]'>
 				<CarouselContent className='ml-32 mr-32'>
 					<CarouselItem key={0} className='basis-1/4'>
-						<div className='group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500'>
-							<div className='absolute top-1/2 flex flex-col items-center'>
-								<div className='w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500' />
-								<span className='absolute h-0.5 left-1/2 w-74 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500' />
-								<p className='mt-2 text-center group-hover:text-background transition-all duration-500'>
-									Identité de marque
-								</p>
+						<HashLink
+							smooth
+							to={`/prestations#${sectionIds[0]}`}
+							className='w-full h-full'
+						>
+							<div className='group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500'>
+								<div className='absolute top-1/2 flex flex-col items-center'>
+									<div className='w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500' />
+									<span className='absolute h-0.5 left-1/2 w-74 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500' />
+									<p className='mt-2 text-center group-hover:text-background transition-all duration-500'>
+										Identité de marque
+									</p>
+								</div>
 							</div>
-						</div>
+						</HashLink>
 					</CarouselItem>
 					{[
-						"Identité de marque",
 						"Développement web",
 						"Stratégie d'expérience",
-						"Stratégie d'espace",
+						"Design d'espace",
 						"Stratégie Événementiel",
 						"Workshop",
 						"Data management",
 					].map((label, index) => (
 						<CarouselItem key={index + 1} className='basis-1/4'>
-							<div className='group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500'>
-								<div className='absolute top-1/2 flex flex-col items-center'>
-									<div className='w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500' />
-									<span className='absolute h-0.5 w-148 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500' />
-									<p className='mt-2 text-center group-hover:text-background transition-all duration-500'>
-										{label}
-									</p>
+							<HashLink
+								smooth
+								to={`/prestations#${sectionIds[index + 1]}`}
+								className='w-full h-full'
+							>
+								<div className='group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500'>
+									<div className='absolute top-1/2 flex flex-col items-center'>
+										<div className='w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500' />
+										<span className='absolute h-0.5 w-148 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500' />
+										<p className='mt-2 text-center group-hover:text-background transition-all duration-500'>
+											{label}
+										</p>
+									</div>
 								</div>
-							</div>
+							</HashLink>
 						</CarouselItem>
 					))}
 					<CarouselItem key={9} className='basis-1/4'>
-						<div className='group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500'>
-							<div className='absolute top-1/2 flex flex-col items-center'>
-								<div className='w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500' />
-								<span className='absolute h-0.5 right-1/2 w-74 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500' />
-								<p className='mt-2 text-center group-hover:text-background transition-all duration-500'>
-									Design Industriel
-								</p>
+						<HashLink
+							smooth
+							to={`/prestations#design_industriel`}
+							className='w-full h-full'
+						>
+							<div className='group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500'>
+								<div className='absolute top-1/2 flex flex-col items-center'>
+									<div className='w-4 h-4 -translate-y-1/2  bg-foreground rounded-full group-hover:bg-background transition-all duration-500' />
+									<span className='absolute h-0.5 right-1/2 w-74 bg-foreground group-hover:bg-background group-hover:z-50 transition-all duration-500' />
+									<p className='mt-2 text-center group-hover:text-background transition-all duration-500'>
+										Design Industriel
+									</p>
+								</div>
 							</div>
-						</div>
+						</HashLink>
 					</CarouselItem>
 					<CarouselItem className='basis-1/4'></CarouselItem>
 				</CarouselContent>

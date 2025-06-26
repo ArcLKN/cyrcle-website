@@ -41,6 +41,7 @@ function NosPrestations() {
 
 	const prestations = [
 		{
+			id: "design_industriel",
 			title: "DESIGN INDUSTRIEL",
 			skills: [
 				"Sketches",
@@ -57,12 +58,14 @@ function NosPrestations() {
 			},
 		},
 		{
+			id: "identite_de_marque",
 			title: "IDENTITÉ DE MARQUE",
 			skills: ["Typographie", "Graphisme", "Adobe", "Branding", "Figma"],
 			description:
 				"Nous vous accompagnons dans la création et le développement de l'identité de votre marque, reflétant votre personnalité et votre connexion au monde",
 		},
 		{
+			id: "developpement_web",
 			title: "DÉVELOPPEMENT WEB",
 			skills: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
 			description:
@@ -72,6 +75,7 @@ function NosPrestations() {
 			},
 		},
 		{
+			id: "strategie_experience",
 			title: "STRATÉGIE D'EXPÉRIENCE",
 			skills: [
 				"Observation",
@@ -89,6 +93,7 @@ function NosPrestations() {
 			},
 		},
 		{
+			id: "design_espace",
 			title: "DESIGN D'ESPACE",
 			skills: [
 				"Maquette d'objet",
@@ -105,6 +110,7 @@ function NosPrestations() {
 			},
 		},
 		{
+			id: "design_evenementiel",
 			title: "DESIGN ÉVÉNEMENTIEL",
 			skills: [
 				"Adobe",
@@ -117,6 +123,7 @@ function NosPrestations() {
 				"Nous vous épaulons dans la conception et la gestion de vos événements pour garantir une expérience immersive et marquante pour les utilisateurs.",
 		},
 		{
+			id: "workshop",
 			title: "WORKSHOP",
 			skills: [
 				"Design Thinking",
@@ -133,6 +140,7 @@ function NosPrestations() {
 			},
 		},
 		{
+			id: "data_management",
 			title: "DATA MANAGEMENT",
 			skills: [
 				"Commandes UNIX",
@@ -161,6 +169,7 @@ function NosPrestations() {
 
 			return (
 				<div
+					id={prestation.id}
 					key={index}
 					ref={(el) => (prestationRefs.current[index] = el)}
 					className='relative w-full h-200 mb-24 flex justify-center items-center'
