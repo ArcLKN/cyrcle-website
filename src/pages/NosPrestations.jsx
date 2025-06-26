@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import cercleBlanc from "../assets/cercle blanc.png";
 import cercleNoir from "../assets/cercle noir.png";
 import doubleDown from "../assets/Double Down.png";
+import avalana from "../assets/Avalana.png";
 import { Link } from "react-router-dom";
 import image_design_industriel from "../assets/image_design_industriel.png";
 
@@ -115,6 +116,7 @@ function NosPrestations() {
 				"Nous proposons des services de tri et d'organisation de données, pour des bases de données fiables et plus accessibles.",
 		},
 	];
+
 	const renderPrestations = () => {
 		return prestations.map((prestation, index) => (
 			<div
@@ -222,8 +224,39 @@ function NosPrestations() {
 								alt='Cercle blanc'
 								className='pointer-events-none h-136 w-auto absolute -translate-x-38 translate-y-64'
 							/>
-							<span className='align-middle h-64 w-[1px] bg-foreground opacity-50' />
+							<span className='align-middle h-64 scale-y-200 w-[1px] bg-foreground opacity-50' />
 							<div className='flex flex-col space-y-8 w-full'>
+								{prestation.title === "IDENTITÉ DE MARQUE" && (
+									<div className='w-full flex justify-end relative'>
+										<span className='absolute top-0 left-0 w-[200%] -translate-x-16 h-px border-t border-dashed border-gray-400' />
+										<span className='absolute bottom-0 left-0 w-[116%] -translate-x-16 h-px border-t border-dashed border-gray-400' />
+										<div className='w-sm -translate-x-12 self-end'>
+											<span className='absolute bottom-0 left-0 h-74 w-px border-l border-dashed border-gray-400' />
+											<span className='absolute top-0 right-0 h-221 -translate-y-46 w-px border-l border-dashed border-gray-400' />
+
+											<span className='absolute top-0 left-24 h-66 -translate-y-46 w-px border-l border-dashed border-gray-400' />
+											<div className='absolute top-20 left-23 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+											<div className='absolute top-21 left-19 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+
+											<span className='absolute top-0 left-34 h-51 -translate-y-46 w-px border-l border-dashed border-gray-400' />
+											<div className='absolute top-5 left-33 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+											<div className='absolute top-6 left-29 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+
+											<span className='absolute -bottom-4 left-62 h-148 translate-y-full w-px border-l border-dashed border-gray-400' />
+											<div className='absolute -bottom-4 left-61 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+											<div className='absolute -bottom-3 left-57 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+
+											<span className='absolute -bottom-4 left-80 h-148 translate-y-full w-px border-l border-dashed border-gray-400' />
+											<div className='absolute -bottom-4 left-79 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+											<div className='absolute -bottom-3 left-75 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+											<img
+												src={avalana}
+												alt='Avalana'
+												className='w-full h-auto'
+											/>
+										</div>
+									</div>
+								)}
 								<p className='text-lg font-manrope font-light max-w-2xl'>
 									{prestation.description}
 								</p>
