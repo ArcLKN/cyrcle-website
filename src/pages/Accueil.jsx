@@ -134,7 +134,12 @@ function Accueil() {
 					</Link>
 				</div>
 			</div>
-			<Carousel className='-translate-x-32 w-[125%]'>
+			<Carousel
+				className='-translate-x-32 w-[125%]'
+				opts={{
+					dragFree: true,
+				}}
+			>
 				<CarouselContent className='ml-32 mr-32'>
 					<CarouselItem key={0} className='basis-1/4'>
 						<HashLink
