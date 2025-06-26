@@ -8,7 +8,6 @@ import {
 	CarouselContent,
 	CarouselItem,
 } from "@/components/ui/carousel";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
@@ -144,7 +143,7 @@ function Accueil() {
 					<CarouselItem key={0} className='basis-1/4'>
 						<HashLink
 							smooth
-							to={`/prestations#${sectionIds[0]}`}
+							to={`/prestations?flipped=true#${sectionIds[0]}`}
 							className='w-full h-full'
 						>
 							<div className='group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500'>
@@ -169,7 +168,9 @@ function Accueil() {
 						<CarouselItem key={index + 1} className='basis-1/4'>
 							<HashLink
 								smooth
-								to={`/prestations#${sectionIds[index + 1]}`}
+								to={`/prestations?flipped=true#${
+									sectionIds[index + 1]
+								}`}
 								className='w-full h-full'
 							>
 								<div className='group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500'>
@@ -187,7 +188,7 @@ function Accueil() {
 					<CarouselItem key={9} className='basis-1/4'>
 						<HashLink
 							smooth
-							to={`/prestations#design_industriel`}
+							to={`/prestations?flipped=true#design_industriel`}
 							className='w-full h-full'
 						>
 							<div className='group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500'>

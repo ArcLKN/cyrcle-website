@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useTheme } from "@/components/theme-provider";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
@@ -157,6 +158,24 @@ function NosPrestations() {
 			},
 		},
 	];
+
+	const location = useLocation();
+
+	useEffect(() => {
+		const { search, hash } = window.location;
+		const params = new URLSearchParams(search);
+		const doFlip = params.get("flipped");
+
+		if (doFlip && hash) {
+			const hashId = hash.replace("#", "");
+
+			const index = prestations.findIndex((p) => p.id === hashId);
+
+			if (index !== -1) {
+				setFlippedIndex(index);
+			}
+		}
+	}, [location]);
 
 	const renderPrestations = () => {
 		return prestations.map((prestation, index) => {
