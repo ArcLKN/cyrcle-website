@@ -4,11 +4,17 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
+import souche from "@/assets/souche_1.png";
 
 function FAQ() {
 	return (
 		<div className='flex justify-between items-center'>
-			<h1 className='text-7xl text-bold'>FAQ</h1>
+			<h1 className='text-9xl'>FAQ</h1>
+			<img
+				src={souche}
+				alt='souche'
+				className='pointer-events-none absolute h-248 w-auto top-1/2 left-1/2 -translate-x-124 -translate-y-100 opacity-50'
+			/>
 			<Accordion type='single' collapsible className='w-full max-w-2xl'>
 				<AccordionItem className='p-4 px-8' value='item-1'>
 					<AccordionTrigger className='text-md'>
