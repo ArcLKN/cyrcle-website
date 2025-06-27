@@ -1,5 +1,8 @@
 import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import souche1 from "@/assets/souche_1.png";
+import souche2 from "@/assets/souche_2.png";
+import souche3 from "@/assets/souche_3.png";
 
 function NousDecouvrir() {
 	const [textIndex, setTextIndex] = useState(0);
@@ -31,7 +34,7 @@ function NousDecouvrir() {
 		<div className='space-y-8 max-w-2/3'>
 			<h1 className='text-5xl font-bold'>{texts[textIndex].title}</h1>
 			<p>{texts[textIndex].text}</p>
-			<div className='flex flex-row space-x-4'>
+			<div className='flex flex-row space-x-4 my-36'>
 				{textIndex > 0 && (
 					<Button
 						className='w-24 bg-background border-1 rounded-2xl border-foreground text-foreground hover:bg-foreground hover:text-background hover:scale-110 transition-all duration-300'
@@ -53,6 +56,21 @@ function NousDecouvrir() {
 					</Button>
 				)}
 			</div>
+			<img
+				src={souche1}
+				alt='souche1'
+				className='pointer-events-none absolute right-0 top-0 h-164 w-auto -translate-x-112 translate-y-24 opacity-50'
+			/>
+			<img
+				src={souche2}
+				alt='souche2'
+				className='pointer-events-none absolute right-0 top-0 h-164 w-auto -translate-x-38 translate-y-36 opacity-50'
+			/>
+			<img
+				src={souche3}
+				alt='souche3'
+				className='pointer-events-none absolute right-0 top-0 h-164 w-auto -translate-x-0 translate-y-54 opacity-50'
+			/>
 		</div>
 	);
 }
