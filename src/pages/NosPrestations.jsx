@@ -34,10 +34,14 @@ function NosPrestations() {
 		});
 	};
 
-	const [flippedIndex, setFlippedIndex] = useState(null);
+	const [flippedIndexes, setFlippedIndexes] = useState([]);
 
 	const toggleFlip = (index) => {
-		setFlippedIndex((prev) => (prev === index ? null : index));
+		setFlippedIndexes((prev) =>
+			prev.includes(index)
+				? prev.filter((i) => i !== index)
+				: [...prev, index]
+		);
 	};
 
 	const prestations = [
@@ -172,7 +176,9 @@ function NosPrestations() {
 			const index = prestations.findIndex((p) => p.id === hashId);
 
 			if (index !== -1) {
-				setFlippedIndex(index);
+				setFlippedIndexes((prev) =>
+					prev.includes(index) ? [...prev] : [...prev, index]
+				);
 			}
 		}
 	}, [location]);
@@ -196,7 +202,7 @@ function NosPrestations() {
 					{/* RECTO */}
 					<div
 						className={`absolute w-full h-full transition-transform duration-700 transform-style-preserve-3d backface-hidden rotate-y-0 ${
-							flippedIndex === index
+							flippedIndexes.includes(index)
 								? "rotate-y-180"
 								: "rotate-y-0"
 						}`}
@@ -276,7 +282,7 @@ function NosPrestations() {
 					{/* VERSO */}
 					<div
 						className={`absolute w-full h-full transition-transform duration-700 transform-style-preserve-3d backface-hidden ${
-							flippedIndex === index
+							flippedIndexes.includes(index)
 								? "rotate-y-0"
 								: "rotate-y-180"
 						}`}
