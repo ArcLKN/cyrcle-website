@@ -25,7 +25,7 @@ export function Header() {
 						FAQ
 						<span className="absolute left-1/2 -translate-x-1/2 translate-y-2 -bottom-1 w-2 h-2 rounded-full bg-foreground opacity-0 group-hover:opacity-100 transition-all duration-300"/>
 					</Link>
-					<Link to="/contact" className="relative group text-xl font-normal">
+					<Link to="/contact" className="relative p-1 px-2 group text-xl font-normal text-foreground border-1 rounded-xl border-foreground hover:text-background hover:bg-foreground hover:border-transparent transition-all duration-300">
 						Contact
 						<span className="absolute left-1/2 -translate-x-1/2 translate-y-2 -bottom-1 w-2 h-2 rounded-full bg-foreground opacity-0 group-hover:opacity-100 transition-all duration-300"/>
 					</Link>
