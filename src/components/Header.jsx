@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 export function Header() {
     return (
-		<header className="p-16 justify-between flex items-center ">
+		<header className="p-8 pb-0 md:p-16 justify-between flex items-center ">
 			<img src={logo} alt="Logo" className="h-18 w-auto" />
 			<div className="hidden md:flex justify-end items-center space-x-16">
 				<nav className="space-x-16">
