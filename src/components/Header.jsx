@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { ModeToggle } from '@/components/mode-toggle'
 import logo from '../assets/logo_cyrcle_blanc.png'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 export function Header() {
     return (
 		<header className="p-16 justify-between flex items-center ">
 			<img src={logo} alt="Logo" className="h-18 w-auto" />
-			<div className="flex justify-end items-center space-x-16">
+			<div className="hidden md:flex justify-end items-center space-x-16">
 				<nav className="space-x-16">
 					<Link to="/" className="relative group text-xl font-normal">
 						Accueil
@@ -31,6 +32,27 @@ export function Header() {
 					</Link>
 				</nav>
 				<ModeToggle />
+			</div>
+
+			<div className="md:hidden flex items-center">
+				<Sheet>
+					<SheetTrigger asChild>
+						<button className="p-2">
+							x
+						</button>
+					</SheetTrigger>
+					<SheetContent side="right" className="p-6 space-y-6">
+						<img src={logo} alt="Logo" className="h-8 w-8" />
+						<nav className="flex flex-col space-y-4 text-xl">
+						<Link to="/">Accueil</Link>
+						<Link to="/prestations">Nos Prestations</Link>
+						<Link to="/decouvrir">Nous Découvrir</Link>
+						<Link to="/faq">FAQ</Link>
+						<Link to="/contact">Contact</Link>
+						</nav>
+						<ModeToggle />
+					</SheetContent>
+				</Sheet>
 			</div>
         </header>
 	)
