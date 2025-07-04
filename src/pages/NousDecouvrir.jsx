@@ -10,7 +10,8 @@ function NousDecouvrir() {
 	const texts = [
 		{
 			title: "Qui sommes-nous ?",
-			text: "CYRCLE : L’innovation au service des entreprises/Façonner l’avenir par le Design\nCYRCLE Design est la Junior Création de CY École de Design. Fondée et gérée par des étudiants, notre association a pour mission de créer un pont entre le monde académique et le monde professionnel en offrant des prestations de qualité, soutenues par des compétences fraîches et innovantes. Nous apportons aux entreprises un accès direct aux talents de demain, avec une	approche à la fois créative et pragmatique.",
+			subtitle: "CYRCLE : L’innovation au service des entreprises/Façonner l’avenir par le Design",
+			text: "CYRCLE Design est la Junior Création de CY École de Design. Fondée et gérée par des étudiants, notre association a pour mission de créer un pont entre le monde académique et le monde professionnel en offrant des prestations de qualité, soutenues par des compétences fraîches et innovantes. Nous apportons aux entreprises un accès direct aux talents de demain, avec une	approche à la fois créative et pragmatique.",
 		},
 		{
 			title: "Notre vision",
@@ -33,6 +34,12 @@ function NousDecouvrir() {
 	return (
 		<div className='space-y-8 max-w-2/3'>
 			<h1 className='text-5xl font-bold'>{texts[textIndex].title}</h1>
+			{texts[textIndex]?.subtitle && (
+				<h2 className='text-xl'>
+					{texts[textIndex].subtitle}
+					</h2>
+					)
+				}
 			<p>{texts[textIndex].text}</p>
 			<div className='flex flex-row space-x-4 my-36'>
 				{textIndex > 0 && (
