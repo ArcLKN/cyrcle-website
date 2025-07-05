@@ -79,25 +79,33 @@ function Accueil() {
 			<img
 				src={cercle}
 				alt='Cercle blanc'
-				className='pointer-events-none h-300 w-auto absolute -translate-x-52 -translate-y-112 animate-custom-rotate'
+				className='pointer-events-none absolute max-w-164 md:max-w-none md:h-300 w-auto -translate-x-74 md:-translate-x-52 -translate-y-84 md-translate-y-112 animate-custom-rotate'
 			/>
-			<div className='flex flex-col font-manrope px-8 space-y-12'>
+			<div className='flex flex-col font-manrope md:px-8 space-y-12'>
 				<div className='flex items-center'>
-					<h1 className='text-9xl'>CYRCLE</h1>
+					<h1 className='text-7xl md:text-9xl'>CYRCLE</h1>
 					<span className='ml-10 align-middle w-48 h-[3px] bg-foreground' />
 				</div>
-				<h1 className='text-9xl justify-end text-right'>
-					THE POWER OF
-				</h1>
-				<h1 className='text-9xl justify-end text-right'>DESIGN</h1>
+				<div className='flex flex-col md:flex-row space-y-12 md:space-y-0 md:space-x-12 md:justify-end'>
+					<h1 className='text-7xl md:text-9xl justify-left text-left'>
+						THE
+					</h1>
+					<h1 className='text-7xl md:text-9xl justify-center text-center'>
+						POWER
+					</h1>
+					<h1 className='text-7xl md:text-9xl justify-right text-right'>
+						OF
+					</h1>
+				</div>
+				<h1 className='text-7xl md:text-9xl justify-end text-right'>DESIGN</h1>
 			</div>
 			<img
 				src={cercle}
 				alt='Cercle blanc'
-				className='pointer-events-none h-300 w-auto absolute right-0 translate-x-80 -translate-y-126  animate-custom-rotate [animation-delay:5s]'
+				className='pointer-events-none absolute max-w-164 md:max-w-none md:h-300 w-auto right-0 translate-x-80 -translate-y-126  animate-custom-rotate [animation-delay:5s]'
 			/>
-			<Separator className='!h-0.25 bg-foreground mb-6 mt-24' />
-			<div className='flex justify-between'>
+			<Separator className='!h-0.25 bg-foreground mb-6 mt-12 md:mt-24' />
+			<div className='flex justify-between mb-8'>
 				<p>cy école de design</p>
 				<div className='text-right'>
 					<p>34 rue de la croix, 78100</p>
@@ -109,9 +117,9 @@ function Accueil() {
 				alt='doubleDown'
 				className='mx-auto pointer-events-none h-12 w-12 animate-bounce'
 			/>
-			<div className='flex flex-row items-center my-42 space-x-12'>
+			<div className='flex flex-row items-center my-16 md:my-42 space-x-12'>
 				<span className='ml-10 align-middle w-48 h-[3px] bg-foreground -translate-x-20' />
-				<h1 className='text-9xl font-manrope'>PRESTATIONS</h1>
+				<h1 className='text-7xl md:text-9xl font-manrope'>PRESTATIONS</h1>
 				<div className='flex flex-col'>
 					<Link
 						to='/'
@@ -168,9 +176,8 @@ function Accueil() {
 						<CarouselItem key={index + 1} className='basis-1/4'>
 							<HashLink
 								smooth
-								to={`/prestations?flipped=true#${
-									sectionIds[index + 1]
-								}`}
+								to={`/prestations?flipped=true#${sectionIds[index + 1]
+									}`}
 								className='w-full h-full'
 							>
 								<div className='group flex flex-col w-148 h-148 rounded-full border-dashed border-2 border-foreground items-center hover:bg-foreground hover:border-none transition-all duration-500'>
@@ -208,7 +215,7 @@ function Accueil() {
 			<img
 				src={cercle}
 				alt='Cercle blanc'
-				className='pointer-events-none absolute h-300 w-auto -right-0 translate-x-92 -translate-y-32  animate-custom-rotate [animation-delay:9s]'
+				className='pointer-events-none absolute max-w-164 md:max-w-none md:h-300 w-auto -right-0 translate-x-92 -translate-y-32  animate-custom-rotate [animation-delay:9s]'
 			/>
 			<div className='flex items-center mt-42 mb-32 space-x-12'>
 				<div className='flex flex-col'>
@@ -225,26 +232,28 @@ function Accueil() {
 						NOTRE ESPRIT
 					</Link>
 				</div>
-				<h1 className='text-9xl font-manrope'>NOUS DÉCOUVRIR</h1>
+				<h1 className='text-7xl md:text-9xl font-manrope'>NOUS DÉCOUVRIR</h1>
 				<span className='ml-10 align-middle w-96 h-[3px] bg-foreground translate-x-24' />
 			</div>
-			<div className='grid grid-cols-4 gap-4 items-center justify-items-center'>
+			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center justify-items-center'>
 				{profilesInfo.map((infos, index) => (
 					<div
 						key={index}
-						className='group relative w-64 h-auto overflow-hidden hover:border-background transition-all duration-500'
+						className='group relative w:32 md:48 lg:w-64 h-auto overflow-hidden hover:border-background transition-all duration-500'
 					>
 						<img
 							src={infos.image.default}
 							alt={`Image ${index}`}
 							className='mb-4 w-full h-full object-cover transition-all duration-500 group-hover:scale-110'
 						/>
-						<p className='font-manrope text-2xl font-extralight'>
-							{infos.name}
-						</p>
-						<p className='opacity-50 font-manrope text-m font-extralight'>
-							{infos.role}
-						</p>
+						<div className="flex flex-col h-32 md:h-auto w-full text-center md:text-start">
+							<p className='font-manrope text-2xl font-extralight'>
+								{infos.name}
+							</p>
+							<p className='opacity-50 font-manrope text-m font-extralight'>
+								{infos.role}
+							</p>
+						</div>
 					</div>
 				))}
 			</div>
