@@ -9,7 +9,7 @@ import souche from "@/assets/souche_1.png";
 function FAQ() {
 	return (
 		<div className='flex flex-col md:flex-row justify-between items-center'>
-			<h1 className='text-7xl md:text-9xl'>FAQ</h1>
+			<h1 className='text-7xl lg:text-9xl'>FAQ</h1>
 			<img
 				src={souche}
 				alt='souche'
