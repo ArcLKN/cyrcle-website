@@ -32,16 +32,16 @@ function NousDecouvrir() {
 	];
 
 	return (
-		<div className='space-y-8 max-w-2/3'>
+		<div className='space-y-8 w-full md:max-w-2/3'>
 			<h1 className='text-5xl font-bold'>{texts[textIndex].title}</h1>
 			{texts[textIndex]?.subtitle && (
 				<h2 className='text-xl'>
 					{texts[textIndex].subtitle}
-					</h2>
-					)
-				}
+				</h2>
+			)
+			}
 			<p>{texts[textIndex].text}</p>
-			<div className='flex flex-row space-x-4 my-36'>
+			<div className='flex flex-row space-x-4 my-16 lg:my-36'>
 				{textIndex > 0 && (
 					<Button
 						className='w-24 bg-background border-1 rounded-2xl border-foreground text-foreground hover:bg-foreground hover:text-background hover:scale-110 transition-all duration-300'
