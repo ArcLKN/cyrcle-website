@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Link } from 'react-router-dom'
 import { ModeToggle } from '@/components/mode-toggle'
 import logo from '../assets/logo_cyrcle_blanc.png'
@@ -5,6 +6,10 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { MenuIcon } from 'lucide-react'
 
 export function Header() {
+	const [open, setOpen] = useState(false)
+
+	const handleClose = () => setOpen(false)
+
 	return (
 		<header className="p-8 pb-0 lg:p-16 justify-between flex items-center ">
 			<img src={logo} alt="Logo" className="h-18 w-auto" />
@@ -35,7 +40,7 @@ export function Header() {
 			</div>
 
 			<div className="md:hidden flex items-center">
-				<Sheet>
+				<Sheet open={open} onOpenChange={setOpen}>
 					<SheetTrigger asChild>
 						<button className="p-2">
 							<MenuIcon className="h-6 w-6 text-foreground" />
@@ -44,11 +49,11 @@ export function Header() {
 					<SheetContent side="right" className="p-6 space-y-6">
 						<img src={logo} alt="Logo" className="h-8 w-8" />
 						<nav className="flex flex-col space-y-4 text-xl">
-							<Link to="/">Accueil</Link>
-							<Link to="/prestations">Nos Prestations</Link>
-							<Link to="/decouvrir">Nous Découvrir</Link>
-							<Link to="/faq">FAQ</Link>
-							<Link to="/contact">Contact</Link>
+							<Link to="/" onClick={handleClose}>Accueil</Link>
+							<Link to="/prestations" onClick={handleClose}>Nos Prestations</Link>
+							<Link to="/decouvrir" onClick={handleClose}>Nous Découvrir</Link>
+							<Link to="/faq" onClick={handleClose}>FAQ</Link>
+							<Link to="/contact" onClick={handleClose}>Contact</Link>
 						</nav>
 						<ModeToggle />
 					</SheetContent>
