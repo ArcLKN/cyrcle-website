@@ -261,10 +261,10 @@ function Accueil() {
 							className='mb-4 w-full h-full object-cover transition-all duration-500 group-hover:scale-110'
 						/>
 						<div className="flex flex-col h-34 w-full text-center md:text-start">
-							<p className='font-manrope text-2xl font-extralight'>
+							<p className='font-manrope text-xl md:text-2xl font-extralight'>
 								{infos.name}
 							</p>
-							<p className='opacity-50 font-manrope text-m font-extralight'>
+							<p className='opacity-50 font-manrope text-md font-extralight'>
 								{infos.role}
 							</p>
 						</div>
