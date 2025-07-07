@@ -189,50 +189,48 @@ function NosPrestations() {
 				theme === "light"
 					? prestation.image?.black || prestation.image?.gray || false
 					: prestation.image?.white ||
-					  prestation.image?.gray ||
-					  false;
+					prestation.image?.gray ||
+					false;
 
 			return (
 				<div
 					id={prestation.id}
 					key={index}
 					ref={(el) => (prestationRefs.current[index] = el)}
-					className='relative w-full h-200 mb-24 flex justify-center items-center'
+					className='relative w-full h-200 lg:h-200 mb-24 flex justify-center items-center'
 				>
 					{/* RECTO */}
 					<div
-						className={`absolute w-full h-full transition-transform duration-700 transform-style-preserve-3d backface-hidden rotate-y-0 ${
-							flippedIndexes.includes(index)
-								? "rotate-y-180"
-								: "rotate-y-0"
-						}`}
+						className={`absolute flex flex-col w-full h-full lg:h-full justify-between transition-transform duration-700 transform-style-preserve-3d backface-hidden rotate-y-0 ${flippedIndexes.includes(index)
+							? "rotate-y-180"
+							: "rotate-y-0"
+							}`}
 					>
-						<div className='mt-54 mb-18'>
+						<div className='lg:mt-54 lg:mb-18'>
 							<img
 								src={cercle}
 								alt='Cercle blanc'
-								className='pointer-events-none h-300 w-auto absolute -translate-x-52 -translate-y-122'
+								className='pointer-events-none max-w-164 md:max-w-192 lg:max-w-none lg:h-300 w-auto absolute -translate-x-52 lg:-translate-y-122'
 							/>
-							<div className='w-full flex items-center justify-between max-space-x-16'>
-								<div className='flex h-64'>
-									<span className='mx-16 translate-y-12 align-middle w-42 h-[3px] bg-foreground inline-block' />
+							<div className='w-full flex flex-col lg:flex-row items-start lg:items-center justify-between space-y-8 lg:space-y-0 lg:max-space-x-16'>
+								<div className='flex flex-col lg:flex-row lg:h-64'>
+									<span className='mb-8 lg:mb-0 lg:mx-16 lg:translate-y-12 align-middle w-42 h-[3px] bg-foreground inline-block' />
 									<h1
-										className={`text-9xl font-manrope font-light ${
-											prestation.title
-												.split(" ")
-												.some(
-													(word) => word.length > 12
-												)
-												? "break-all"
-												: "break-words"
-										} hyphens-auto`}
+										className={`text-5xl md:text-7xl lg:text-9xl font-manrope font-light ${prestation.title
+											.split(" ")
+											.some(
+												(word) => word.length > 12
+											)
+											? "break-all"
+											: "break-words"
+											} hyphens-auto`}
 									>
 										{prestation.title}
 									</h1>
 								</div>
-								<div className='flex space-x-12 items-center w-52'>
+								<div className='flex space-x-12 items-start lg:items-center w-52'>
 									<span className='align-middle h-64 w-[1px] bg-foreground opacity-50' />
-									<ul className='list-disc ml-5 w-full space-y-4'>
+									<ul className='list-disc lg:ml-5 w-full space-y-4'>
 										{prestation.skills.map(
 											(skill, skillIndex) => (
 												<li key={skillIndex}>
@@ -245,7 +243,7 @@ function NosPrestations() {
 							</div>
 						</div>
 						<div className='flex flex-col'>
-							<span className='mb-10 align-middle h-32 w-[3px] bg-foreground translate-x-7' />
+							<span className='mb-10 align-middle h-[3px] w-32 lg:h-32 lg:w-[3px] bg-foreground translate-x-7' />
 							<div className='flex items-center space-x-12'>
 								<div className='flex flex-col space-y-4 items-center'>
 									{index > 0 && (
@@ -269,7 +267,7 @@ function NosPrestations() {
 										/>
 									)}
 								</div>
-								<Separator className='flex-1 !h-0.25 bg-foreground my-12 w-auto opacity-50' />
+								<Separator className='flex-1 !h-0.25 bg-foreground my-0 lg:my-12 w-auto opacity-50' />
 								<Button
 									className='w-24 bg-background border-1 rounded-2xl border-foreground text-foreground hover:bg-foreground hover:text-background hover:scale-110 transition-all duration-300'
 									onClick={() => toggleFlip(index)}
@@ -281,19 +279,18 @@ function NosPrestations() {
 					</div>
 					{/* VERSO */}
 					<div
-						className={`absolute w-full h-full transition-transform duration-700 transform-style-preserve-3d backface-hidden ${
-							flippedIndexes.includes(index)
-								? "rotate-y-0"
-								: "rotate-y-180"
-						}`}
+						className={`absolute flex flex-col justify-between w-full h-full transition-transform duration-700 transform-style-preserve-3d backface-hidden ${flippedIndexes.includes(index)
+							? "rotate-y-0"
+							: "rotate-y-180"
+							}`}
 					>
-						<div className='mt-46 mb-18'>
+						<div className='lg:mt-46 lg:mb-18'>
 							<img
 								src={cercleBlanc}
 								alt='Cercle blanc'
 								className='pointer-events-none h-124 w-auto absolute -translate-x-58 -translate-y-78'
 							/>
-							<div className='flex items-center space-x-16 justify-between'>
+							<div className='flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-16 justify-between'>
 								<div className='flex flex-col items-start w-52 space-y-8'>
 									<span className='align-middle w-full h-[3px] bg-foreground' />
 									<h1 className='text-3xl font-manrope font-light'>
@@ -305,40 +302,40 @@ function NosPrestations() {
 									alt='Cercle blanc'
 									className='pointer-events-none h-136 w-auto absolute -translate-x-38 translate-y-64'
 								/>
-								<span className='align-middle h-64 scale-y-200 w-[1px] bg-foreground opacity-50' />
+								<span className='align-middle w-64 h-[1px] lg:h-64 lg:scale-y-200 lg:w-[1px] bg-foreground opacity-50' />
 								<div className='flex flex-col space-y-8 w-full'>
 									{prestation.title ===
 										"IDENTITÉ DE MARQUE" && (
-										<div className='w-full flex justify-end relative'>
-											<span className='absolute top-0 left-0 w-[200%] -translate-x-16 h-px border-t border-dashed border-gray-400' />
-											<span className='absolute bottom-0 left-0 w-[116%] -translate-x-16 h-px border-t border-dashed border-gray-400' />
-											<div className='w-sm -translate-x-12 self-end'>
-												<span className='absolute bottom-0 left-0 h-74 w-px border-l border-dashed border-gray-400' />
-												<span className='absolute top-0 right-0 h-221 -translate-y-46 w-px border-l border-dashed border-gray-400' />
+											<div className='w-full flex justify-end relative'>
+												<span className='absolute top-0 left-0 w-[200%] -translate-x-16 h-px border-t border-dashed border-gray-400' />
+												<span className='absolute bottom-0 left-0 w-[116%] -translate-x-16 h-px border-t border-dashed border-gray-400' />
+												<div className='w-sm -translate-x-12 self-end'>
+													<span className='absolute bottom-0 left-0 h-74 w-px border-l border-dashed border-gray-400' />
+													<span className='absolute top-0 right-0 h-221 -translate-y-46 w-px border-l border-dashed border-gray-400' />
 
-												<span className='absolute top-0 left-24 h-66 -translate-y-46 w-px border-l border-dashed border-gray-400' />
-												<div className='absolute top-20 left-23 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
-												<div className='absolute top-21 left-19 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+													<span className='absolute top-0 left-24 h-66 -translate-y-46 w-px border-l border-dashed border-gray-400' />
+													<div className='absolute top-20 left-23 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+													<div className='absolute top-21 left-19 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
 
-												<span className='absolute top-0 left-34 h-51 -translate-y-46 w-px border-l border-dashed border-gray-400' />
-												<div className='absolute top-5 left-33 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
-												<div className='absolute top-6 left-29 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+													<span className='absolute top-0 left-34 h-51 -translate-y-46 w-px border-l border-dashed border-gray-400' />
+													<div className='absolute top-5 left-33 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+													<div className='absolute top-6 left-29 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
 
-												<span className='absolute -bottom-4 left-62 h-148 translate-y-full w-px border-l border-dashed border-gray-400' />
-												<div className='absolute -bottom-4 left-61 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
-												<div className='absolute -bottom-3 left-57 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+													<span className='absolute -bottom-4 left-62 h-148 translate-y-full w-px border-l border-dashed border-gray-400' />
+													<div className='absolute -bottom-4 left-61 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+													<div className='absolute -bottom-3 left-57 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
 
-												<span className='absolute -bottom-4 left-80 h-148 translate-y-full w-px border-l border-dashed border-gray-400' />
-												<div className='absolute -bottom-4 left-79 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
-												<div className='absolute -bottom-3 left-75 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
-												<img
-													src={avalana}
-													alt='Avalana'
-													className='w-full h-auto'
-												/>
+													<span className='absolute -bottom-4 left-80 h-148 translate-y-full w-px border-l border-dashed border-gray-400' />
+													<div className='absolute -bottom-4 left-79 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+													<div className='absolute -bottom-3 left-75 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+													<img
+														src={avalana}
+														alt='Avalana'
+														className='w-full h-auto'
+													/>
+												</div>
 											</div>
-										</div>
-									)}
+										)}
 									<p className='text-lg font-manrope font-light max-w-2xl'>
 										{prestation.description}
 									</p>
@@ -364,7 +361,7 @@ function NosPrestations() {
 							</div>
 						</div>
 						<div className='flex flex-col'>
-							<span className='mb-10 align-middle h-32 w-[3px] bg-foreground translate-x-7' />
+							<span className='mb-10 align-middle h-[3px] w-32 lg:h-32 lg:w-[3px] bg-foreground translate-x-7' />
 							<div className='flex items-center space-x-12'>
 								<div className='flex flex-col space-y-4 items-center'>
 									{index > 0 && (
@@ -403,7 +400,7 @@ function NosPrestations() {
 		});
 	};
 
-	return <div className='flex flex-col'>{renderPrestations()}</div>;
+	return <div className='flex flex-col h-full w-full'>{renderPrestations()}</div>;
 }
 
 export default NosPrestations;
