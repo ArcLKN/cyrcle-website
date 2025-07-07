@@ -8,15 +8,15 @@ import souche from "@/assets/souche_1.png";
 
 function FAQ() {
 	return (
-		<div className='flex justify-between items-center'>
-			<h1 className='text-9xl'>FAQ</h1>
+		<div className='flex flex-col md:flex-row justify-between items-center'>
+			<h1 className='text-7xl md:text-9xl'>FAQ</h1>
 			<img
 				src={souche}
 				alt='souche'
 				className='pointer-events-none absolute h-248 w-auto top-1/2 left-1/2 -translate-x-124 -translate-y-100 opacity-50'
 			/>
 			<Accordion type='single' collapsible className='w-full max-w-2xl'>
-				<AccordionItem className='p-4 px-8' value='item-1'>
+				<AccordionItem className='p-4 md:md:px-8' value='item-1'>
 					<AccordionTrigger className='text-md'>
 						Comment nous contacter ?
 					</AccordionTrigger>
@@ -28,7 +28,7 @@ function FAQ() {
 					</AccordionContent>
 				</AccordionItem>
 
-				<AccordionItem className='p-4 px-8' value='item-2'>
+				<AccordionItem className='p-4 md:px-8' value='item-2'>
 					<AccordionTrigger className='text-md'>
 						Où sommes-nous situés ?
 					</AccordionTrigger>
@@ -40,7 +40,7 @@ function FAQ() {
 					</AccordionContent>
 				</AccordionItem>
 
-				<AccordionItem className='p-4 px-8' value='item-3'>
+				<AccordionItem className='p-4 md:px-8' value='item-3'>
 					<AccordionTrigger className='text-md'>
 						Quels services proposons-nous ?
 					</AccordionTrigger>
@@ -52,7 +52,7 @@ function FAQ() {
 					</AccordionContent>
 				</AccordionItem>
 
-				<AccordionItem className='p-4 px-8' value='item-4'>
+				<AccordionItem className='p-4 md:px-8' value='item-4'>
 					<AccordionTrigger className='text-md'>
 						Quels sont nos tarifs ? Offrons-nous des réductions ?
 					</AccordionTrigger>
@@ -64,7 +64,7 @@ function FAQ() {
 					</AccordionContent>
 				</AccordionItem>
 
-				<AccordionItem className='p-4 px-8' value='item-5'>
+				<AccordionItem className='p-4 md:px-8' value='item-5'>
 					<AccordionTrigger className='text-md'>
 						Quelle est l'histoire de notre jeune entreprise ?
 					</AccordionTrigger>
@@ -76,7 +76,7 @@ function FAQ() {
 					</AccordionContent>
 				</AccordionItem>
 
-				<AccordionItem className='p-4 px-8' value='item-6'>
+				<AccordionItem className='p-4 md:px-8' value='item-6'>
 					<AccordionTrigger className='text-md'>
 						Quels sont les délais de nos prestations ?
 					</AccordionTrigger>
