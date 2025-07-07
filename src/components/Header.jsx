@@ -6,10 +6,10 @@ import { MenuIcon } from 'lucide-react'
 
 export function Header() {
 	return (
-		<header className="p-8 pb-0 md:p-16 justify-between flex items-center ">
+		<header className="p-8 pb-0 lg:p-16 justify-between flex items-center ">
 			<img src={logo} alt="Logo" className="h-18 w-auto" />
-			<div className="hidden md:flex justify-end items-center space-x-16">
-				<nav className="space-x-16">
+			<div className="hidden md:flex justify-end items-center md:space-x-8 lg:space-x-12 xl:space-x-16">
+				<nav className="md:space-x-8 lg:space-x-16">
 					<Link to="/" className="relative group text-xl font-normal">
 						Accueil
 						<span className="absolute left-1/2 -translate-x-1/2 translate-y-2 -bottom-1 w-2 h-2 rounded-full bg-foreground opacity-0 group-hover:opacity-100 transition-all duration-300" />
