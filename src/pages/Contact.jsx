@@ -30,17 +30,17 @@ function Contact() {
 	const cercle = theme === "light" ? cercleNoir : cercleBlanc;
 
 	return (
-		<div className='flex flex-row h-screen w-full items-center space-x-16'>
-			<div className='flex flex-col w-1/2 h-screen justify-center relative'>
+		<div className='flex flex-col lg:flex-row h-screen w-full items-center space-y-8 lg:space-y-0 lg:space-x-16'>
+			<div className='flex flex-col w-full h-auto lg:w-1/2 lg:h-screen justify-center relative'>
 				<img
 					src={cercle}
 					alt='Cercle blanc'
 					className='pointer-events-none h-180 w-auto absolute -translate-y-32 translate-x-32'
 				/>
-				<h1 className='text-6xl font-manrope font-extralight'>
+				<h1 className='text-3xl md:text-6xl font-manrope font-extralight'>
 					CYRCLE :
 				</h1>
-				<p className='text-6xl font-manrope'>
+				<p className='text-3xl md:text-6xl font-manrope'>
 					le design qui fait tourner vos projets !
 				</p>
 				<img
@@ -49,8 +49,8 @@ function Contact() {
 					className='pointer-events-none h-180 w-auto absolute translate-y-40 -translate-x-64'
 				/>
 			</div>
-			<span className='align-middle h-full w-[1px] bg-foreground opacity-50' />
-			<div className='w-1/2 items-center justify-center relative'>
+			<span className='align-middle h-[1px] w-full lg:h-full lg:w-[1px] bg-foreground opacity-50' />
+			<div className='w-full md:w-2/3 lg:1/2 items-center justify-center relative'>
 				{/* Ici mettre le form avec nom, adresse mail, tel, type entreprise, objet, message et bouton envoyer*/}
 
 				<form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
@@ -67,8 +67,8 @@ function Contact() {
 						)}
 					</div>
 
-					<div className='flex space-x-4 w-full'>
-						<div className='space-y-2 w-1/2'>
+					<div className='flex flex-col xs:flex-row space-y-6 xs:space-y-0 xs:space-x-4 w-full'>
+						<div className='space-y-2 w-full xs:w-1/2'>
 							<Label htmlFor='email'>Email</Label>
 							<Input
 								type='email'
@@ -82,7 +82,7 @@ function Contact() {
 							)}
 						</div>
 
-						<div className='space-y-2 w-1/2'>
+						<div className='space-y-2 w-full xs:w-1/2'>
 							<Label htmlFor='tel'>Téléphone</Label>
 							<Input type='tel' id='tel' {...register("tel")} />
 						</div>
