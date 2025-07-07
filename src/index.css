@@ -7,6 +7,8 @@
 
 
 @theme inline {
+  --breakpoint-xs: 30rem;
+  /* 480px */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -43,28 +45,35 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --font-montserrat: "Montserrat", sans-serif;
-  --font-manrope: "Manrope", sans-serif; 
+  --font-manrope: "Manrope", sans-serif;
 
   --animate-custom-rotate: custom-rotate 15s ease-in-out infinite;
+
   @keyframes custom-rotate {
     0% {
       transform: rotate(0deg);
-    },
+    }
+
+    ,
     10% {
       transform: rotate(-7deg);
     }
+
     32%,
     42% {
       transform: rotate(82deg);
     }
+
     54%,
     64% {
       transform: rotate(172deg);
     }
+
     76%,
     86% {
       transform: rotate(-97deg);
     }
+
     100% {
       transform: rotate(0deg);
     }
@@ -104,8 +113,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --font-montserrat: "Montserrat", sans-serif; 
-  --font-manrope: "Manrope", sans-serif; 
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
 }
 
 body {
@@ -144,14 +153,15 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-  --font-montserrat: "Montserrat", sans-serif; 
-  --font-manrope: "Manrope", sans-serif; 
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
