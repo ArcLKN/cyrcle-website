@@ -79,32 +79,32 @@ function Accueil() {
 			<img
 				src={cercle}
 				alt='Cercle blanc'
-				className='pointer-events-none absolute max-w-164 md:max-w-none md:h-300 w-auto -translate-x-74 md:-translate-x-52 -translate-y-84 md-translate-y-112 animate-custom-rotate'
+				className='pointer-events-none absolute max-w-164 md:max-w-192 lg:max-w-none lg:h-300 w-auto -translate-x-74 lg:-translate-x-52 -translate-y-84 md-translate-y-112 animate-custom-rotate'
 			/>
-			<div className='flex flex-col font-manrope md:px-8 space-y-12'>
+			<div className='flex flex-col font-manrope lg:px-8 space-y-12'>
 				<div className='flex items-center'>
-					<h1 className='text-7xl md:text-9xl'>CYRCLE</h1>
+					<h1 className='text-7xl lg:text-9xl'>CYRCLE</h1>
 					<span className='ml-10 align-middle w-48 h-[3px] bg-foreground' />
 				</div>
 				<div className='flex flex-col md:flex-row space-y-12 md:space-y-0 md:space-x-12 md:justify-end'>
-					<h1 className='text-7xl md:text-9xl justify-left text-left'>
+					<h1 className='text-7xl lg:text-9xl justify-left text-left'>
 						THE
 					</h1>
-					<h1 className='text-7xl md:text-9xl justify-center text-center'>
+					<h1 className='text-7xl lg:text-9xl justify-center text-center'>
 						POWER
 					</h1>
-					<h1 className='text-7xl md:text-9xl justify-right text-right'>
+					<h1 className='text-7xl lg:text-9xl justify-right text-right'>
 						OF
 					</h1>
 				</div>
-				<h1 className='text-7xl md:text-9xl justify-end text-right'>DESIGN</h1>
+				<h1 className='text-7xl lg:text-9xl justify-end text-right'>DESIGN</h1>
 			</div>
 			<img
 				src={cercle}
 				alt='Cercle blanc'
-				className='pointer-events-none absolute max-w-164 md:max-w-none md:h-300 w-auto right-0 translate-x-80 -translate-y-126  animate-custom-rotate [animation-delay:5s]'
+				className='pointer-events-none absolute max-w-164 lg:max-w-none lg:h-300 w-auto right-0 translate-x-80 -translate-y-126  animate-custom-rotate [animation-delay:5s]'
 			/>
-			<Separator className='!h-0.25 bg-foreground mb-6 mt-12 md:mt-24' />
+			<Separator className='!h-0.25 bg-foreground mb-6 mt-12 lg:mt-24' />
 			<div className='flex justify-between mb-8'>
 				<p>cy école de design</p>
 				<div className='text-right'>
@@ -117,10 +117,10 @@ function Accueil() {
 				alt='doubleDown'
 				className='mx-auto pointer-events-none h-12 w-12 animate-bounce'
 			/>
-			<div className='flex flex-row items-center my-16 md:my-42 space-x-12'>
-				<span className='ml-10 align-middle w-48 h-[3px] bg-foreground -translate-x-20' />
-				<h1 className='text-7xl md:text-9xl font-manrope'>PRESTATIONS</h1>
-				<div className='flex flex-col'>
+			<div className='flex flex-col lg:flex-row items-start lg:items-center my-16 lg:my-42 lg:space-x-12'>
+				<span className='hidden lg:flex lg:ml-10 align-middle w-48 h-[3px] bg-foreground -translate-x-20' />
+				<h1 className='text-5xl md:text-7xl lg:text-9xl font-manrope'>PRESTATIONS</h1>
+				<div className='flex flex-row space-x-4 lg:flex-col'>
 					<Link
 						to='/'
 						className='opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300'
@@ -215,10 +215,10 @@ function Accueil() {
 			<img
 				src={cercle}
 				alt='Cercle blanc'
-				className='pointer-events-none absolute max-w-164 md:max-w-none md:h-300 w-auto -right-0 translate-x-92 -translate-y-32  animate-custom-rotate [animation-delay:9s]'
+				className='pointer-events-none absolute max-w-164 md:max-w-192 lg:max-w-none lg:h-300 w-auto -right-0 translate-x-92 -translate-y-32  animate-custom-rotate [animation-delay:9s]'
 			/>
-			<div className='flex items-center mt-42 mb-32 space-x-12'>
-				<div className='flex flex-col'>
+			<div className='flex flex-col lg:flex-row items-start lg:items-center mt-42 mb-32 space-x-12'>
+				<div className='hidden lg:flex flex-row lg:flex-col space-x-4'>
 					<Link
 						to='/'
 						className='opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300'
@@ -232,21 +232,35 @@ function Accueil() {
 						NOTRE ESPRIT
 					</Link>
 				</div>
-				<h1 className='text-7xl md:text-9xl font-manrope'>NOUS DÉCOUVRIR</h1>
-				<span className='ml-10 align-middle w-96 h-[3px] bg-foreground translate-x-24' />
+				<h1 className='text-5xl md:text-7xl lg:text-9xl font-manrope'>NOUS DÉCOUVRIR</h1>
+				<div className='flex lg:hidden flex-row lg:flex-col space-x-4'>
+					<Link
+						to='/'
+						className='opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300'
+					>
+						LA TEAM
+					</Link>
+					<Link
+						to='/'
+						className='opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300'
+					>
+						NOTRE ESPRIT
+					</Link>
+				</div>
+				<span className='hidden lg:flex ml-10 align-middle w-96 h-[3px] bg-foreground translate-x-24' />
 			</div>
 			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center justify-items-center'>
 				{profilesInfo.map((infos, index) => (
 					<div
 						key={index}
-						className='group relative w:32 md:48 lg:w-64 h-auto overflow-hidden hover:border-background transition-all duration-500'
+						className='group relative w:w-32 md:w-48 lg:w-52 xl:w-64 h-auto overflow-hidden hover:border-background transition-all duration-500'
 					>
 						<img
 							src={infos.image.default}
 							alt={`Image ${index}`}
 							className='mb-4 w-full h-full object-cover transition-all duration-500 group-hover:scale-110'
 						/>
-						<div className="flex flex-col h-32 md:h-auto w-full text-center md:text-start">
+						<div className="flex flex-col h-34 w-full text-center md:text-start">
 							<p className='font-manrope text-2xl font-extralight'>
 								{infos.name}
 							</p>
