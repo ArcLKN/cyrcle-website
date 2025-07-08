@@ -1,10 +1,19 @@
 import { useRef, useState } from "react";
+import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
-import souche1 from "@/assets/souche_1.png";
-import souche2 from "@/assets/souche_2.png";
-import souche3 from "@/assets/souche_3.png";
+import souche1_white from "@/assets/souche_1.png";
+import souche2_white from "@/assets/souche_2.png";
+import souche3_white from "@/assets/souche_3.png";
+import souche1_black from "@/assets/souche_1_black.png";
+import souche2_black from "@/assets/souche_2_black.png";
+import souche3_black from "@/assets/souche_3_black.png";
 
 function NousDecouvrir() {
+	const { theme, setTheme } = useTheme();
+	const souche1 = theme === "dark" ? souche1_white : souche1_black;
+	const souche2 = theme === "dark" ? souche2_white : souche2_black;
+	const souche3 = theme === "dark" ? souche3_white : souche3_black;
+
 	const [textIndex, setTextIndex] = useState(0);
 
 	const texts = [
