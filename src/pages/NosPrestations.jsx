@@ -11,11 +11,13 @@ import { Link } from "react-router-dom";
 import image_design_industriel_white from "../assets/image_design_industriel_white.png";
 import image_data_management_white from "../assets/image_data_management_white.png";
 import image_design_espace_white from "../assets/image_design_espace_white.png";
-import image_workshop_white from "../assets/image_workshop_white.png";
+import image_workshop_white from "../assets/image_workshop_double_white.png";
+import image_design_evenementiel_white from "../assets/image_design_evenementiel_white.png";
 import image_design_industriel_black from "../assets/image_design_industriel_black.png";
 import image_data_management_black from "../assets/image_data_management_black.png";
 import image_design_espace_black from "../assets/image_design_espace_black.png";
-import image_workshop_black from "../assets/image_workshop_black.png";
+import image_workshop_black from "../assets/image_workshop_double_black.png";
+import image_design_evenementiel_black from "../assets/image_design_evenementiel_black.png";
 
 import image_developpement_web_gray from "../assets/image_developpement_web_gray.png";
 import image_strategie_experience_gray from "../assets/image_strategie_experience_gray.png";
@@ -77,6 +79,10 @@ function NosPrestations() {
 				"Nous mettons en œuvre nos compétences en informatique et en design, alliant créativité et fonctionnalité, au service du site web de votre entreprise.",
 			image: {
 				gray: image_developpement_web_gray,
+				parameters: {
+					alt: "Développement Web Image",
+					className: "left-0 translate-x-100 translate-y-10 scale-130",
+				}
 			},
 		},
 		{
@@ -95,6 +101,10 @@ function NosPrestations() {
 				"Nous vous assistons dans la recherche et l'optimisation de l'expérience utilisateur, pour ainsi développer la solution la plus pertinente face aux enjeux de vos clients.",
 			image: {
 				gray: image_strategie_experience_gray,
+				parameters: {
+					alt: "Stratégie Expérience Image",
+					className: "-translate-x-50 -translate-y-0 scale-150",
+				}
 			},
 		},
 		{
@@ -112,6 +122,10 @@ function NosPrestations() {
 			image: {
 				white: image_design_espace_white,
 				black: image_design_espace_black,
+				parameters: {
+					alt: "Design Espace Image",
+					className: "-translate-x-20 -translate-y-0 scale-150",
+				}
 			},
 		},
 		{
@@ -126,6 +140,10 @@ function NosPrestations() {
 			],
 			description:
 				"Nous vous épaulons dans la conception et la gestion de vos événements pour garantir une expérience immersive et marquante pour les utilisateurs.",
+			image: {
+				white: image_design_evenementiel_white,
+				black: image_design_evenementiel_black,
+			},
 		},
 		{
 			id: "workshop",
@@ -142,6 +160,10 @@ function NosPrestations() {
 			image: {
 				white: image_workshop_white,
 				black: image_workshop_black,
+				parameters: {
+					alt: "Workshop Image",
+					className: "-translate-x-20 -translate-y-0 scale-125",
+				}
 			},
 		},
 		{
@@ -355,7 +377,7 @@ function NosPrestations() {
 									<img
 										src={imageSrc}
 										alt={prestation.title}
-										className='absolute right-0 w-156 h-auto object-cover rounded-lg'
+										className={`absolute right-0 w-156 h-auto object-cover opacity-70 ${prestation.image?.parameters?.className || ""}`}
 									/>
 								)}
 							</div>
