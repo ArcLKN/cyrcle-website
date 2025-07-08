@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Link } from 'react-router-dom'
 import { ModeToggle } from '@/components/mode-toggle'
 import logo from '../assets/logo_cyrcle_blanc.png'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { Sheet, SheetTitle, SheetDescription, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { MenuIcon } from 'lucide-react'
 
 export function Header() {
@@ -47,6 +47,10 @@ export function Header() {
 						</button>
 					</SheetTrigger>
 					<SheetContent side="right" className="p-6 space-y-6">
+						<SheetTitle className="sr-only">Navigation</SheetTitle>
+						<SheetDescription className="sr-only">
+							Use this menu to navigate to other pages
+						</SheetDescription>
 						<img src={logo} alt="Logo" className="h-8 w-8" />
 						<nav className="flex flex-col space-y-4 text-xl">
 							<Link to="/" onClick={handleClose}>Accueil</Link>
