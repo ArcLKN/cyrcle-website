@@ -1,12 +1,16 @@
+import { useTheme } from "@/components/theme-provider";
 import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
-import souche from "@/assets/souche_1.png";
+import souche1_white from "@/assets/souche_1.png";
+import souche1_black from "@/assets/souche_1_black.png";
 
 function FAQ() {
+	const { theme, setTheme } = useTheme();
+	const souche = theme === "dark" ? souche1_white : souche1_black;
 	return (
 		<div className='flex flex-col md:flex-row justify-between items-center'>
 			<h1 className='text-7xl lg:text-9xl'>FAQ</h1>
