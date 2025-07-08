@@ -81,7 +81,7 @@ function NosPrestations() {
 				gray: image_developpement_web_gray,
 				parameters: {
 					alt: "Développement Web Image",
-					className: "left-0 translate-x-100 translate-y-10 scale-130",
+					className: "left-0 opacity-100 translate-x-100 translate-y-10 scale-130",
 				}
 			},
 		},
@@ -377,7 +377,7 @@ function NosPrestations() {
 									<img
 										src={imageSrc}
 										alt={prestation.title}
-										className={`absolute right-0 w-156 h-auto object-cover opacity-70 ${prestation.image?.parameters?.className || ""}`}
+										className={`absolute right-0 w-156 h-auto object-cover opacity-50 ${prestation.image?.parameters?.className || ""}`}
 									/>
 								)}
 							</div>
