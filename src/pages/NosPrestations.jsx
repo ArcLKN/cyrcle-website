@@ -230,7 +230,7 @@ function NosPrestations() {
 					id={prestation.id}
 					key={index}
 					ref={(el) => (prestationRefs.current[index] = el)}
-					className='relative w-full h-200 lg:h-200 mb-24 flex justify-center items-center'
+					className='relative w-full h-200 lg:h-200 mb-40 flex justify-center items-center'
 				>
 					{/* RECTO */}
 					<div
@@ -312,7 +312,7 @@ function NosPrestations() {
 					</div>
 					{/* VERSO */}
 					<div
-						className={`absolute flex flex-col justify-between w-full h-full transition-transform duration-700 transform-style-preserve-3d backface-hidden ${flippedIndexes.includes(index)
+						className={`absoluteflex flex-col justify-between w-full h-full transition-transform duration-700 transform-style-preserve-3d backface-hidden ${flippedIndexes.includes(index)
 							? "rotate-y-0"
 							: "rotate-y-180"
 							}`}
@@ -400,13 +400,6 @@ function NosPrestations() {
 									{index > 0 && (
 										<DoubleDown
 											theme={theme}
-											action={() => scrollToNext(index)}
-											direction='down'
-										/>
-									)}
-									{index < prestations.length - 1 && (
-										<DoubleDown
-											theme={theme}
 											action={() =>
 												prestationRefs.current[
 													index - 1
@@ -415,6 +408,13 @@ function NosPrestations() {
 												})
 											}
 											direction='up'
+										/>
+									)}
+									{index < prestations.length - 1 && (
+										<DoubleDown
+											theme={theme}
+											action={() => scrollToNext(index)}
+											direction='down'
 										/>
 									)}
 								</div>
