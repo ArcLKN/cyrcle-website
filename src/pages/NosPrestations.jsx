@@ -62,6 +62,10 @@ function NosPrestations() {
 			image: {
 				white: image_design_industriel_white,
 				black: image_design_industriel_black,
+				parameters: {
+					alt: "Design Industriel Image",
+					className: "-translate-y-24 bottom-0",
+				}
 			},
 		},
 		{
@@ -81,7 +85,7 @@ function NosPrestations() {
 				gray: image_developpement_web_gray,
 				parameters: {
 					alt: "Développement Web Image",
-					className: "left-0 opacity-100 translate-x-100 translate-y-10 scale-130",
+					className: "left-0 opacity-100 translate-y-76 md:translate-y-36 md:scale-115 md:translate-x-4 lg:translate-x-100 lg:translate-y-10 lg:scale-130",
 				}
 			},
 		},
@@ -103,7 +107,7 @@ function NosPrestations() {
 				gray: image_strategie_experience_gray,
 				parameters: {
 					alt: "Stratégie Expérience Image",
-					className: "-translate-x-50 -translate-y-0 scale-150",
+					className: "bottom-0 -translate-y-48 opacity-100 lg:-translate-x-50 lg:scale-150",
 				}
 			},
 		},
@@ -124,7 +128,7 @@ function NosPrestations() {
 				black: image_design_espace_black,
 				parameters: {
 					alt: "Design Espace Image",
-					className: "-translate-x-20 -translate-y-0 scale-150",
+					className: "bottom-0 -translate-y-60 lg:bottom-auto lg:-translate-x-20 lg:-translate-y-0 scale-150",
 				}
 			},
 		},
@@ -143,6 +147,10 @@ function NosPrestations() {
 			image: {
 				white: image_design_evenementiel_white,
 				black: image_design_evenementiel_black,
+				parameters: {
+					alt: "Design Évènementiel Image",
+					className: "bottom-0 -translate-y-24 lg:bottom-auto lg:-translate-y-0",
+				}
 			},
 		},
 		{
@@ -162,7 +170,7 @@ function NosPrestations() {
 				black: image_workshop_black,
 				parameters: {
 					alt: "Workshop Image",
-					className: "-translate-x-20 -translate-y-0 scale-125",
+					className: "bottom-0 lg:bottom-auto lg:-translate-x-20 -translate-y-56 lg:-translate-y-0 lg:scale-125",
 				}
 			},
 		},
@@ -181,6 +189,10 @@ function NosPrestations() {
 			image: {
 				white: image_data_management_white,
 				black: image_data_management_black,
+				parameters: {
+					alt: "Design Espace Image",
+					className: "bottom-0 -translate-y-48 lg:bottom-auto lg:-translate-y-0",
+				}
 			},
 		},
 	];
@@ -310,7 +322,7 @@ function NosPrestations() {
 							<img
 								src={cercleBlanc}
 								alt='Cercle blanc'
-								className='pointer-events-none h-124 w-auto absolute -translate-x-58 -translate-y-78'
+								className='pointer-events-none max-w-92 md:max-w-92 lg:max-w-none lg:h-124 w-auto absolute lg:-translate-x-58 lg:-translate-y-78'
 							/>
 							<div className='flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-16 justify-between'>
 								<div className='flex flex-col items-start w-52 space-y-8'>
@@ -322,7 +334,7 @@ function NosPrestations() {
 								<img
 									src={cercleBlanc}
 									alt='Cercle blanc'
-									className='pointer-events-none h-136 w-auto absolute -translate-x-38 translate-y-64'
+									className='pointer-events-none max-w-92 md:max-w-92 lg:max-w-none lg:h-136 w-auto absolute -translate-x-38 translate-y-64'
 								/>
 								<span className='align-middle w-64 h-[1px] lg:h-64 lg:scale-y-200 lg:w-[1px] bg-foreground opacity-50' />
 								<div className='flex flex-col space-y-8 w-full'>
