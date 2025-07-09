@@ -7,7 +7,6 @@ import cercleBlanc from "../assets/cercle blanc.png";
 import cercleNoir from "../assets/cercle noir.png";
 import avalanaWhite from "../assets/Avalana.png";
 import avalanaBlack from "../assets/Avalana black.png";
-import { Link } from "react-router-dom";
 import image_design_industriel_white from "../assets/image_design_industriel_white.png";
 import image_data_management_white from "../assets/image_data_management_white.png";
 import image_design_espace_white from "../assets/image_design_espace_white.png";
@@ -342,26 +341,26 @@ function NosPrestations() {
 										"IDENTITÉ DE MARQUE" && (
 											<div className='w-full flex justify-end relative'>
 												<span className='absolute top-0 left-0 w-[200%] -translate-x-16 h-px border-t border-dashed border-gray-400' />
-												<span className='absolute bottom-0 left-0 w-[116%] -translate-x-16 h-px border-t border-dashed border-gray-400' />
+												<span className='absolute bottom-0 left-0 w-[150%] -translate-x-16 h-px border-t border-dashed border-gray-400' />
 												<div className='w-sm -translate-x-12 self-end'>
-													<span className='absolute bottom-0 left-0 h-74 w-px border-l border-dashed border-gray-400' />
-													<span className='absolute top-0 right-0 h-221 -translate-y-46 w-px border-l border-dashed border-gray-400' />
+													<span className='absolute bottom-0 left-0 h-35 lg:h-74 w-px border-l border-dashed border-gray-400' />
+													<span className='absolute top-0 right-0 h-144 lg:h-221 -translate-y-8 lg:-translate-y-46 w-px border-l border-dashed border-gray-400' />
 
-													<span className='absolute top-0 left-24 h-66 -translate-y-46 w-px border-l border-dashed border-gray-400' />
-													<div className='absolute top-20 left-23 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
-													<div className='absolute top-21 left-19 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+													<span className='absolute top-0 left-1/4 translate-x-0.5 lg:translate-x-1 h-1/1 lg:h-66 -translate-y-8  lg:-translate-y-46 w-px border-l border-dashed border-gray-400' />
+													<div className='absolute bottom-0 -translate-y-7 left-1/4 w-1.5 h-1.5 lg:w-2 lg:h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+													<div className='absolute bottom-0 -translate-y-2 lg:translate-y-2 left-1/4 -translate-x-2.5 lg:-translate-x-4 w-6 h-6 lg:w-10 lg:h-10 border-dashed border-1 rounded-full border-gray-400' />
 
-													<span className='absolute top-0 left-34 h-51 -translate-y-46 w-px border-l border-dashed border-gray-400' />
-													<div className='absolute top-5 left-33 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
-													<div className='absolute top-6 left-29 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+													<span className='absolute top-0 left-4/11 h-13 lg:h-51 -translate-y-8  lg:-translate-y-46 w-px border-l border-dashed border-gray-400' />
+													<div className='absolute top-5 left-4/11 -translate-x-0.5 lg:-translate-x-1 w-1.5 h-1.5 lg:w-2 lg:h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+													<div className='absolute top-6 left-4/11 -translate-x-2.5 lg:-translate-x-5 w-6 h-6 lg:w-10 lg:h-10 border-dashed border-1 rounded-full border-gray-400' />
 
-													<span className='absolute -bottom-4 left-62 h-148 translate-y-full w-px border-l border-dashed border-gray-400' />
-													<div className='absolute -bottom-4 left-61 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
-													<div className='absolute -bottom-3 left-57 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+													<span className='absolute -bottom-3 lg:-bottom-4 left-3/5 translate-x-0.5 lg:translate-x-1 h-111 lg:h-148 translate-y-full w-px border-l border-dashed border-gray-400' />
+													<div className='absolute -bottom-3 lg:-bottom-4 left-3/5 w-1.5 h-1.5 lg:w-2 lg:h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+													<div className='absolute -bottom-2 lg:-bottom-3 left-3/5 -translate-x-2.5 lg:-translate-x-4 w-6 h-6 lg:w-10 lg:h-10 border-dashed border-1 rounded-full border-gray-400' />
 
-													<span className='absolute -bottom-4 left-80 h-148 translate-y-full w-px border-l border-dashed border-gray-400' />
-													<div className='absolute -bottom-4 left-79 w-2 h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
-													<div className='absolute -bottom-3 left-75 w-10 h-10 border-dashed border-1 rounded-full border-gray-400' />
+													<span className='absolute -bottom-3 lg:-bottom-4 left-4/5 translate-x-0.5 lg:translate-x-1 h-111 lg:h-148 translate-y-full w-px border-l border-dashed border-gray-400' />
+													<div className='absolute -bottom-3 lg:-bottom-4 left-4/5 w-1.5 h-1.5 lg:w-2 lg:h-2 bg-gray-400 rounded-full shadow-lg overflow-hidden' />
+													<div className='absolute -bottom-2 lg:-bottom-3 left-4/5 -translate-x-2.5 lg:-translate-x-4 w-6 h-6 lg:w-10 lg:h-10 border-dashed border-1 rounded-full border-gray-400' />
 													<img
 														src={avalana}
 														alt='Avalana'
