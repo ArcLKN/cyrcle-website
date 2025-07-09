@@ -20,7 +20,7 @@ function Accueil() {
 	});
 	const profileImageList = Object.values(profileImages);
 	const profilesInfo = [
-		{ name: "Lou", role: "Présidente", image: profileImageList[0] },
+		{ name: "Lou Gicquel", role: "Présidente", image: profileImageList[0] },
 		{
 			name: "Appoline Boiselle",
 			role: "Secrétariat Général",
