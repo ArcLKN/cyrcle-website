@@ -12,7 +12,7 @@ export function Header() {
 
 	return (
 		<header className="p-8 pb-0 lg:p-16 justify-between flex items-center ">
-			<img src={logo} alt="Logo" className="h-18 w-auto" />
+			<img src={logo} alt="Logo" className="h-18 w-auto mr-4" />
 			<div className="hidden md:flex justify-end items-center md:space-x-8 lg:space-x-12 xl:space-x-16">
 				<nav className="md:space-x-8 lg:space-x-16">
 					<Link to="/" className="relative group text-xl font-normal">
