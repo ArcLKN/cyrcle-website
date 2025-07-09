@@ -322,7 +322,7 @@ function NosPrestations() {
 							<img
 								src={cercleBlanc}
 								alt='Cercle blanc'
-								className='pointer-events-none max-w-92 md:max-w-92 lg:max-w-none lg:h-124 w-auto absolute lg:-translate-x-58 lg:-translate-y-78'
+								className='pointer-events-none max-w-92 md:max-w-92 lg:max-w-none lg:h-124 w-auto absolute -translate-x-24 lg:-translate-x-58 -translate-y-36 lg:-translate-y-78'
 							/>
 							<div className='flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-16 justify-between'>
 								<div className='flex flex-col items-start w-52 space-y-8'>
