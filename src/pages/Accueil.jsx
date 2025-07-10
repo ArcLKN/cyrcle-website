@@ -282,7 +282,7 @@ function Accueil() {
 								className='mb-4 w-full h-auto aspect-[3/4] object-cover transition-all duration-500 group-hover:scale-110'
 							/>
 							{infos?.linkedin &&
-								<img src={LinkedinLogo} alt="LinkedIn Logo" className="absolute bottom-1/4 left-1/6 scale-90 group-hover:scale-100 opacity-0 -translate-x-1/2 -translate-y-1/2 transform group-hover:opacity-100 transition-all duration-300 inline-block w-12 h-12 mr-6 hover:scale-110" />
+								<img src={LinkedinLogo} alt="LinkedIn Logo" className="absolute bottom-1/3 lg:bottom-1/4 left-1/6 scale-90 group-hover:scale-100 opacity-0 -translate-x-1/2 -translate-y-1/2 transform group-hover:opacity-100 transition-all duration-300 inline-block w-12 h-12 mr-6 hover:scale-110" />
 							}
 						</Link>
 
