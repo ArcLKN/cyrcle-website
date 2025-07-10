@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import LinkedinLogo from "@/assets/Linkedin-logo-black.webp";
 
 function Accueil() {
 	const { theme, setTheme } = useTheme();
@@ -20,46 +21,59 @@ function Accueil() {
 	});
 	const profileImageList = Object.values(profileImages);
 	const profilesInfo = [
-		{ name: "Lou Gicquel", role: "Présidente", image: profileImageList[0] },
+		{
+			name: "Lou Gicquel",
+			role: "Présidente",
+			image: profileImageList[0],
+			linkedin: "https://www.linkedin.com/in/lougicquel/",
+		},
 		{
 			name: "Appoline Boiselle",
 			role: "Secrétariat Général",
 			image: profileImageList[1],
+			linkedin: "https://www.linkedin.com/in/appoline-boiselle-382652262/",
 		},
 		{
 			name: "Mathis Dufal",
 			role: "Responsable Trésorerie",
 			image: profileImageList[2],
+			linkedin: "https://www.linkedin.com/in/mathis-dufal-631346208/",
 		},
 		{
 			name: "Mahdi Jaafar",
 			role: "Responsable Développement commercial",
 			image: profileImageList[3],
+			linkedin: "https://www.linkedin.com/in/mahdi-jaafar-983670238/",
 		},
 		{
 			name: "Sophie Mereyde",
 			role: "Responsable Ressources Humaines",
 			image: profileImageList[4],
+			linkedin: "https://www.linkedin.com/in/sophiemereyde/",
 		},
 		{
 			name: "Bastien Meunier",
 			role: "Responsable Chargé 'Affaires",
 			image: profileImageList[5],
+			linkedin: "https://www.linkedin.com/in/bastien-meunier-578b58245/",
 		},
 		{
 			name: "N'Gnima Coulibaly",
 			role: "Responsable Qualité",
 			image: profileImageList[6],
+			linkedin: "https://www.linkedin.com/in/n%E2%80%99gnima-coulibaly-237638239/",
 		},
 		{
 			name: "Adrien Wilmart",
 			role: "Responsable Technique",
 			image: profileImageList[7],
+			linkedin: "https://www.linkedin.com/in/adrienwlmrt/",
 		},
 		{
 			name: "Aymène Ben Mohamed",
 			role: "Responsable Communication",
 			image: profileImageList[8],
+			linkedin: "https://www.linkedin.com/in/aym%C3%A8ne-ben-mohamed/",
 		},
 	];
 
@@ -254,13 +268,23 @@ function Accueil() {
 					<div
 						key={index}
 						className='group relative w-32 xs:w-36 sm:w-48 lg:w-52 xl:w-64 h-auto hover:border-background transition-all duration-500'
+						href={infos?.linkedin ? infos.linkedin : "#"}
+					// If you want to make the image clickable, you can wrap it in a Link
 					>
-
-						<img
-							src={infos.image.default}
-							alt={`Image ${index}`}
-							className='mb-4 w-full h-auto aspect-[3/4] object-cover transition-all duration-500 group-hover:scale-110'
-						/>
+						<Link
+							to={infos?.linkedin ? infos.linkedin : "#"}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src={infos.image.default}
+								alt={`Image ${index}`}
+								className='mb-4 w-full h-auto aspect-[3/4] object-cover transition-all duration-500 group-hover:scale-110'
+							/>
+							{infos?.linkedin &&
+								<img src={LinkedinLogo} alt="LinkedIn Logo" className="absolute bottom-1/4 left-1/6 scale-90 group-hover:scale-100 opacity-0 -translate-x-1/2 -translate-y-1/2 transform group-hover:opacity-100 transition-all duration-300 inline-block w-12 h-12 mr-6 hover:scale-110" />
+							}
+						</Link>
 
 						<div className="flex flex-col h-34 w-full text-center md:text-start">
 							<p className='font-manrope text-xl md:text-2xl font-extralight'>
