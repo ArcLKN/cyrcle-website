@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import cercleBlanc from "../assets/cercle blanc.png";
 import cercleNoir from "../assets/cercle noir.png";
 import { useTheme } from "@/components/theme-provider";
@@ -13,6 +14,13 @@ import { HashLink } from "react-router-hash-link";
 import LinkedinLogo from "@/assets/Linkedin-logo-black.webp";
 
 function Accueil() {
+
+	useEffect(() => {
+		fetch('http://localhost:3001/api/hello')
+			.then(res => res.json())
+			.then(data => console.log(data.message));
+	}, []);
+
 	const { theme, setTheme } = useTheme();
 	const cercle = theme === "light" ? cercleNoir : cercleBlanc;
 
