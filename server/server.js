@@ -15,12 +15,12 @@ app.use(bodyParser.json({ limit: "10mb" }));
 app.use(bodyParser.urlencoded({ extended: false }));
 const PORT = process.env.PORT;
 
-// const emailRoutes = require("./routes/MailRoutes.js");
+const emailRoutes = require("./routes/MailRoutes.js");
+app.use("/api", emailRoutes);
 
 app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello from server!' });
 });
-
 
 app.listen(PORT, () => {
 	console.log(`Server is on port: ${PORT}`);

@@ -22,8 +22,26 @@ function Contact() {
 		formState: { errors },
 	} = useForm();
 
-	const onSubmit = (data) => {
-		console.log("Form data:", data);
+	const onSubmit = async (data) => {
+		try {
+			const response = await fetch("http://localhost:3001/api/email", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+
+			const result = await response.json();
+			if (response.ok) {
+				alert("Message envoyé !");
+			} else {
+				alert("Erreur : " + result.error);
+			}
+		} catch (err) {
+			console.error(err);
+			alert("Erreur d'envoi");
+		}
 	};
 
 	const { theme, setTheme } = useTheme();
@@ -91,9 +109,6 @@ function Contact() {
 					<div className='space-y-2'>
 						<Label>Type d’entreprise</Label>
 						<Select
-							onValueChange={(val) =>
-								setValue("typeEntreprise", val)
-							}
 						>
 							<SelectTrigger>
 								<SelectValue placeholder='Sélectionnez' />
