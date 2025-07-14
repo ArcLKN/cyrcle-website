@@ -240,7 +240,7 @@ function Accueil() {
 				className='pointer-events-none absolute max-w-164 md:max-w-192 lg:max-w-none lg:h-300 w-auto -right-0 translate-x-92 -translate-y-32  animate-custom-rotate [animation-delay:9s]'
 			/>
 			<div className='flex flex-col lg:flex-row items-start lg:items-center mt-42 mb-32 space-x-12'>
-				<div className='hidden lg:flex flex-row lg:flex-col space-x-4'>
+				<div className='text-right hidden lg:flex flex-row lg:flex-col space-y-3'>
 					<Link
 						to='/'
 						className='opacity-50 hover:opacity-100 hover:scale-105 transition-all duration-300'
