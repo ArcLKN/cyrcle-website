@@ -61,7 +61,7 @@ function Accueil() {
 		},
 		{
 			name: "Bastien Meunier",
-			role: "Responsable Chargé 'Affaires",
+			role: "Responsable Chargé d'Affaires",
 			image: profileImageList[5],
 			linkedin: "https://www.linkedin.com/in/bastien-meunier-578b58245/",
 		},
