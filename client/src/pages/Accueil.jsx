@@ -37,7 +37,7 @@ function Accueil() {
 		},
 		{
 			name: "Appoline Boiselle",
-			role: "Secrétariat Général",
+			role: "Secrétaire Générale",
 			image: profileImageList[1],
 			linkedin: "https://www.linkedin.com/in/appoline-boiselle-382652262/",
 		},
