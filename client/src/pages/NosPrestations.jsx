@@ -249,14 +249,7 @@ function NosPrestations() {
 								<div className='flex flex-col lg:flex-row lg:h-64'>
 									<span className='mb-8 lg:mb-0 lg:mx-16 lg:translate-y-12 align-middle w-42 h-[3px] bg-foreground inline-block' />
 									<h1
-										className={`text-5xl md:text-7xl lg:text-9xl font-manrope font-light ${prestation.title
-											.split(" ")
-											.some(
-												(word) => word.length > 12
-											)
-											? "break-all"
-											: "break-words"
-											} hyphens-auto`}
+										className={`text-5xl md:text-7xl lg:text-9xl font-manrope font-light break-words hyphens-auto`}
 									>
 										{prestation.title}
 									</h1>
