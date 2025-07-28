@@ -14,7 +14,7 @@ export default function TeamProfileCard({ infos, index }) {
             >
                 <img
                     src={infos.image.default}
-                    alt={infos.name ? `Portrait of ${infos.name}` : `Portrait ${index + 1}`}
+                    alt={infos.name ? `Portrait de ${infos.name}` : `Portrait ${index + 1}`}
                     className='mb-4 w-full h-auto aspect-[3/4] object-cover transition-all duration-500 group-hover:scale-110'
                 />
                 {infos?.linkedin &&
