@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from '@/components/theme-provider'
 import MainLayout from './components/layout/MainLayout'
 
-import Accueil from './pages/Accueil'
+import Accueil from './pages/accueil/Accueil'
 import NosPrestations from './pages/NosPrestations'
 import NousDecouvrir from './pages/NousDecouvrir'
 import FAQ from './pages/FAQ'
