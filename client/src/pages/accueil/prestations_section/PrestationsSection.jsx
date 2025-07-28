@@ -4,10 +4,10 @@ import PrestationCarousel from "./PrestationCarousel";
 export default function PrestationsSection() {
 
 	return (
-		<div>
+		<section aria-labelledby="prestations-heading" className="relative">
 			<div className='flex flex-col lg:flex-row items-start lg:items-center my-16 lg:my-42 lg:space-x-12'>
 				<span className='hidden lg:flex lg:ml-10 align-middle w-48 h-[3px] bg-foreground -translate-x-20' />
-				<h1 className='text-5xl md:text-7xl lg:text-9xl font-manrope'>PRESTATIONS</h1>
+				<h1 id="prestations-heading" className='text-5xl md:text-7xl lg:text-9xl font-manrope'>PRESTATIONS</h1>
 				<div className='flex flex-row space-x-4 lg:flex-col'>
 					<Link
 						to='/'
@@ -30,6 +30,6 @@ export default function PrestationsSection() {
 				</div>
 			</div>
 			<PrestationCarousel />
-		</div>
+		</section>
 	)
 }
