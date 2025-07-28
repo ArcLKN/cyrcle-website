@@ -7,7 +7,8 @@ export default function CyrcleSection({ cercle }) {
         <div>
             <img
                 src={cercle}
-                alt='Cercle blanc'
+                alt=''
+                aria-hidden="true"
                 className='pointer-events-none absolute max-w-164 md:max-w-192 lg:max-w-none lg:h-300 w-auto -translate-x-74 lg:-translate-x-52 -translate-y-84 md-translate-y-112 animate-custom-rotate'
             />
             <div className='flex flex-col font-manrope lg:px-8 space-y-12'>
@@ -30,7 +31,8 @@ export default function CyrcleSection({ cercle }) {
             </div>
             <img
                 src={cercle}
-                alt='Cercle blanc'
+                alt=''
+                aria-hidden="true"
                 className='pointer-events-none absolute max-w-164 lg:max-w-none lg:h-300 w-auto right-0 translate-x-80 -translate-y-126  animate-custom-rotate [animation-delay:5s]'
             />
             <Separator className='!h-0.25 bg-foreground mb-6 mt-12 lg:mt-24' />
