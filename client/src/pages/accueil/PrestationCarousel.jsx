@@ -51,26 +51,23 @@ export default function PrestationCarousel() {
 			}}
 		>
 			<CarouselContent className='mx-16 xs:mx-24 sm:mx-36 md:mx-48 lg:mx-32'>
-				<PrestationCarouselItem
-					key={0}
-					sectionId={sectionData[0].sectionId}
-					label={sectionData[0].label}
-					position={"left"}
-				/>
-				{sectionData.slice(1, -1).map((label, index) => (
-					<PrestationCarouselItem
-						key={index + 1}
-						sectionId={sectionData[index + 1].sectionId}
-						label={sectionData[index + 1].label}
-						position={"middle"}
-					/>
-				))}
-				<PrestationCarouselItem
-					key={sectionData.length - 1}
-					sectionId={sectionData[sectionData.length - 1].sectionId}
-					label={sectionData[sectionData.length - 1].label}
-					position={"right"}
-				/>
+				{sectionData.map(({ sectionId, label }, index) => {
+					const position =
+						index === 0
+							? "left"
+							: index === sectionData.length - 1
+								? "right"
+								: "middle";
+
+					return (
+						<PrestationCarouselItem
+							key={sectionId}
+							sectionId={sectionId}
+							label={label}
+							position={position}
+						/>
+					);
+				})}
 				<CarouselItem className='basis-1/4'></CarouselItem>
 			</CarouselContent>
 		</Carousel>
