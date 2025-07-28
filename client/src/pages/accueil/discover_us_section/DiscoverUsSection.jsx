@@ -1,16 +1,12 @@
 import TeamProfilesGrids from "./TeamProfilesGrid";
 import { Link } from "react-router-dom";
+import RotatingCircle from "../../../components/RotatingCircle";
 
-export default function DiscoverUsSection({ cercle }) {
+export default function DiscoverUsSection() {
 
     return (
         <div>
-            <img
-                src={cercle}
-                alt=''
-                aria-hidden="true"
-                className='pointer-events-none absolute max-w-164 md:max-w-192 lg:max-w-none lg:h-300 w-auto -right-0 translate-x-92 -translate-y-32  animate-custom-rotate [animation-delay:9s]'
-            />
+            <RotatingCircle className='-right-0 translate-x-92 -translate-y-32' delay="9s" />
             <div className='flex flex-col lg:flex-row items-start lg:items-center mt-42 mb-32 space-x-12'>
                 <div className='text-right hidden lg:flex flex-row lg:flex-col space-y-3'>
                     <Link
