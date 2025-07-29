@@ -6,7 +6,7 @@ export default function CyrcleSection() {
 
     return (
         <section aria-labelledby="cyrcle-heading" className="relative">
-            <RotatingCircle className='-translate-x-74 lg:-translate-x-52 -translate-y-84 md-translate-y-112' />
+            <RotatingCircle className='-translate-x-74 lg:-translate-x-52 -translate-y-84 md-translate-y-112 max-w-164 md:max-w-192 lg:max-w-none lg:h-300' />
             <div className='flex flex-col font-manrope lg:px-8 space-y-12'>
                 <div className='flex items-center'>
                     <h1 id="cyrcle-heading" className='text-7xl lg:text-9xl'>CYRCLE</h1>
@@ -25,7 +25,7 @@ export default function CyrcleSection() {
                 </div>
                 <h1 className='text-7xl lg:text-9xl justify-end text-end'>DESIGN</h1>
             </div>
-            <RotatingCircle className='right-0 translate-x-80 -translate-y-126' delay="5s" />
+            <RotatingCircle className='right-0 translate-x-80 -translate-y-126 max-w-164 md:max-w-192 lg:max-w-none lg:h-300' delay="5s" />
             <Separator className='!h-0.25 bg-foreground mb-6 mt-12 lg:mt-24' />
             <div className='flex justify-between mb-8'>
                 <p>cy école de design</p>
