@@ -12,7 +12,7 @@ export default function RotatingCircle({ className, delay = "0s", doAnimate = tr
             src={cercle}
             alt=""
             aria-hidden="true"
-            className={`pointer-events-none absolute max-w-164 md:max-w-192 lg:max-w-none lg:h-300 w-auto ${doAnimate ? "animate-custom-rotate" : ""} ${className}`}
+            className={`pointer-events-none absolute w-auto ${doAnimate ? "animate-custom-rotate" : ""} ${className}`}
             style={{ animationDelay: delay }}
         />
     );
