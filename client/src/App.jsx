@@ -6,7 +6,7 @@ import Accueil from './pages/accueil/Accueil'
 import NosPrestations from './pages/NosPrestations'
 import NousDecouvrir from './pages/NousDecouvrir'
 import FAQ from './pages/FAQ'
-import Contact from './pages/Contact'
+import Contact from './pages/contact/Contact'
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import TeamProfilesGrids from "./TeamProfilesGrid";
 import { Link } from "react-router-dom";
-import RotatingCircle from "../../../components/RotatingCircle";
+import RotatingCircle from "@/components/RotatingCircle";
 
 export default function DiscoverUsSection() {
 
