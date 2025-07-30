@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
 import souche1_white from "@/assets/souche_1.png";
@@ -40,21 +40,36 @@ function NousDecouvrir() {
 		},
 	];
 
-	return (
-		<div className='space-y-8 w-full md:max-w-2/3'>
-			<h1 className='text-5xl font-bold'>{texts[textIndex].title}</h1>
-			{texts[textIndex]?.subtitle && (
-				<h2 className='text-xl'>
-					{texts[textIndex].subtitle}
-				</h2>
-			)
+	useEffect(() => {
+		const handleKey = (e) => {
+			if (e.key === "ArrowRight" && textIndex < texts.length - 1) {
+				setTextIndex(textIndex + 1);
+			} else if (e.key === "ArrowLeft" && textIndex > 0) {
+				setTextIndex(textIndex - 1);
 			}
-			<p>{texts[textIndex].text}</p>
+		};
+		window.addEventListener("keydown", handleKey);
+		return () => window.removeEventListener("keydown", handleKey);
+	}, [textIndex]);
+
+	return (
+		<section aria-labelledby="discover-heading" className='space-y-8 w-full max-w-prose lg:max-w-2/3'>
+			<div key={textIndex} role="region" aria-live="polite">
+				<h1 id="discover-heading" className='text-5xl font-bold mb-4'>{texts[textIndex].title}</h1>
+				{texts[textIndex]?.subtitle && (
+					<h2 className='text-xl mb-2'>
+						{texts[textIndex].subtitle}
+					</h2>
+				)
+				}
+				<p className="leading-relaxed">{texts[textIndex].text}</p>
+			</div>
 			<div className='flex flex-row space-x-4 my-16 lg:my-36'>
 				{textIndex > 0 && (
 					<Button
 						className='w-24 bg-background border-1 rounded-2xl border-foreground text-foreground hover:bg-foreground hover:text-background hover:scale-110 transition-all duration-300'
 						onClick={() => setTextIndex(Math.max(textIndex - 1, 0))}
+						aria-label="Afficher l'information précédente"
 					>
 						Précédent
 					</Button>
@@ -67,6 +82,7 @@ function NousDecouvrir() {
 								Math.min(textIndex + 1, texts.length - 1)
 							)
 						}
+						aria-label="Afficher l'information suivante"
 					>
 						Suivant
 					</Button>
@@ -74,20 +90,26 @@ function NousDecouvrir() {
 			</div>
 			<img
 				src={souche1}
-				alt='souche1'
+				aria-hidden="true"
+				alt=""
 				className='pointer-events-none absolute right-0 top-0 h-164 w-auto -translate-x-112 translate-y-24 opacity-50'
+				loading="lazy"
 			/>
 			<img
 				src={souche2}
-				alt='souche2'
+				aria-hidden="true"
+				alt=""
 				className='pointer-events-none absolute right-0 top-0 h-164 w-auto -translate-x-38 translate-y-36 opacity-50'
+				loading="lazy"
 			/>
 			<img
 				src={souche3}
-				alt='souche3'
+				aria-hidden="true"
+				alt=""
 				className='pointer-events-none absolute right-0 top-0 h-164 w-auto -translate-x-0 translate-y-54 opacity-50'
+				loading="lazy"
 			/>
-		</div>
+		</section>
 	);
 }
 
