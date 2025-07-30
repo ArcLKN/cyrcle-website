@@ -12,35 +12,35 @@ function FAQ() {
 	const { theme, setTheme } = useTheme();
 	const souche = theme === "dark" ? souche1_white : souche1_black;
 	return (
-		<div className='flex flex-col md:flex-row justify-between items-center'>
-			<h1 className='text-7xl lg:text-9xl'>FAQ</h1>
+		<section aria-labelledby="faq-heading" className='flex flex-col md:flex-row justify-between items-center'>
+			<h1 id="faq-heading" className='text-7xl lg:text-9xl'>FAQ</h1>
 			<img
 				src={souche}
-				alt='souche'
+				aria-hidden="true"
 				className='pointer-events-none absolute h-248 w-auto top-1/2 left-1/2 -translate-x-124 -translate-y-100 opacity-50'
 			/>
 			<Accordion type='single' collapsible className='w-full max-w-2xl'>
-				<AccordionItem className='p-4 md:md:px-8' value='item-1'>
+				<AccordionItem className='p-4 md:px-8' value='contact'>
 					<AccordionTrigger className='text-md'>
 						Comment nous contacter ?
 					</AccordionTrigger>
 					<AccordionContent className='flex flex-col gap-4 text-balance'>
 						<p>À travers notre page de contact, notre adresse mail <a href="mailto:cyrcle.cydesign@gmail.com">cyrcle.cydesign@gmail.com</a> ou encore notre <a href="https://www.linkedin.com/company/cyrcle-design/">compte linkedin</a>.
-							Nous sommes disponibles pour réponde à vos questionnements et vos potentiels projets.</p>
+							Nous sommes disponibles pour répondre à vos questionnements et vos potentiels projets.</p>
 					</AccordionContent>
 				</AccordionItem>
 
-				<AccordionItem className='p-4 md:px-8' value='item-2'>
+				<AccordionItem className='p-4 md:px-8' value='location'>
 					<AccordionTrigger className='text-md'>
 						Où sommes-nous situés ?
 					</AccordionTrigger>
 					<AccordionContent className='flex flex-col gap-4 text-balance'>
-						Notre école est située à Saint germain en laye à IxCampus, un campus mêlant entreprise et étudiant.
+						Notre école est située à Saint-Germain-en-Laye à IxCampus, un campus mêlant entreprise et étudiant.
 						Nous pouvons nous déplacer pour certaines missions.
 					</AccordionContent>
 				</AccordionItem>
 
-				<AccordionItem className='p-4 md:px-8' value='item-3'>
+				<AccordionItem className='p-4 md:px-8' value='services'>
 					<AccordionTrigger className='text-md'>
 						Quels services proposons-nous ?
 					</AccordionTrigger>
@@ -51,18 +51,18 @@ function FAQ() {
 					</AccordionContent>
 				</AccordionItem>
 
-				<AccordionItem className='p-4 md:px-8' value='item-4'>
+				<AccordionItem className='p-4 md:px-8' value='tarifs'>
 					<AccordionTrigger className='text-md'>
 						Quels sont nos tarifs ? Offrons-nous des réductions ?
 					</AccordionTrigger>
 					<AccordionContent className='flex flex-col gap-4 text-balance'>
-						Nos tarifs sont mis en place en accord avec votre projet en fonction d’une grille tarifaire établie pour rémunérer nos étudiants à la hauteur de leurs travails.
+						Nos tarifs sont mis en place en accord avec votre projet en fonction d’une grille tarifaire établie pour rémunérer nos étudiants à la hauteur de leurs travaux.
 						Un budget final est réalisé en collaboration avec nos membres pour répondre au mieux à votre problématique.
 						Pour cette raison, nous ne proposons aucune réduction.
 					</AccordionContent>
 				</AccordionItem>
 
-				<AccordionItem className='p-4 md:px-8' value='item-5'>
+				<AccordionItem className='p-4 md:px-8' value='histoire'>
 					<AccordionTrigger className='text-md'>
 						Quelle est l'histoire de notre jeune entreprise ?
 					</AccordionTrigger>
@@ -73,7 +73,7 @@ function FAQ() {
 					</AccordionContent>
 				</AccordionItem>
 
-				<AccordionItem className='p-4 md:px-8' value='item-6'>
+				<AccordionItem className='p-4 md:px-8' value='delais'>
 					<AccordionTrigger className='text-md'>
 						Quels sont les délais de nos prestations ?
 					</AccordionTrigger>
@@ -85,7 +85,7 @@ function FAQ() {
 					</AccordionContent>
 				</AccordionItem>
 			</Accordion>
-		</div>
+		</section>
 	);
 }
 
