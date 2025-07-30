@@ -227,9 +227,7 @@ function NosPrestations() {
 					className='relative w-full h-200 lg:h-200 mb-40 flex justify-center items-center'
 					aria-labelledby={`${prestation.id}-title`}
 				>
-					{/* RECTO */}
 					<PrestationCardRecto prestations={prestations} prestation={prestation} theme={theme} scrollToNext={scrollToNext} toggleFlip={toggleFlip} flippedIndexes={flippedIndexes} index={index} />
-					{/* VERSO */}
 					<PrestationCardVerso prestations={prestations} prestation={prestation} theme={theme} scrollToNext={scrollToNext} toggleFlip={toggleFlip} imageSrc={imageSrc} flippedIndexes={flippedIndexes} index={index} />
 				</article>
 			);
