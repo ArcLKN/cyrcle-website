@@ -16,6 +16,7 @@ import image_developpement_web_gray from "@/assets/image_developpement_web_gray.
 import image_strategie_experience_gray from "@/assets/image_strategie_experience_gray.png";
 import PrestationCardRecto from "./PrestationCardRecto";
 import PrestationCardVerso from "./PrestationCardVerso";
+import { Button } from "@/components/ui/button";
 
 function NosPrestations() {
 	const { theme } = useTheme();
@@ -234,7 +235,10 @@ function NosPrestations() {
 		});
 	};
 
-	return <section className='flex flex-col h-full w-full'>{renderPrestations()}</section>;
+	return <section className='flex flex-col h-full w-full items-center'>
+		{renderPrestations()}
+		<Button className="min-w-auto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Remonter en haut de la page" >Go back to top</Button>
+	</section>;
 }
 
 export default NosPrestations;
