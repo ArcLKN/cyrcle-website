@@ -14,7 +14,7 @@ export function Header() {
 		<header className="p-8 pb-0 lg:p-16 justify-between flex items-center ">
 			<img src={logo} alt="Logo" className="h-18 w-auto mr-4" />
 			<div className="hidden md:flex justify-end items-center md:space-x-8 lg:space-x-12 xl:space-x-16">
-				<nav className="md:space-x-8 lg:space-x-16">
+				<nav aria-label="Navigation principale" className="md:space-x-8 lg:space-x-16">
 					<Link to="/" className="relative group text-xl font-normal">
 						Accueil
 						<span className="absolute left-1/2 -translate-x-1/2 translate-y-2 -bottom-1 w-2 h-2 rounded-full bg-foreground opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -42,7 +42,7 @@ export function Header() {
 			<div className="md:hidden flex items-center">
 				<Sheet open={open} onOpenChange={setOpen}>
 					<SheetTrigger asChild>
-						<button className="p-2">
+						<button className="p-2" aria-label="Ouvrir le menu de navigation" title="Ouvrir le menu">
 							<MenuIcon className="h-6 w-6 text-foreground" />
 						</button>
 					</SheetTrigger>
@@ -51,8 +51,10 @@ export function Header() {
 						<SheetDescription className="sr-only">
 							Use this menu to navigate to other pages
 						</SheetDescription>
-						<img src={logo} alt="Logo" className="h-8 w-8" />
-						<nav className="flex flex-col space-y-4 text-xl">
+						<Link to="/" onClick={handleClose}>
+							<img src={logo} alt="Logo" className="h-8 w-8" />
+						</Link>
+						<nav aria-label="Navigation principale" className="flex flex-col space-y-4 text-xl">
 							<Link to="/" onClick={handleClose}>Accueil</Link>
 							<Link to="/prestations" onClick={handleClose}>Nos Prestations</Link>
 							<Link to="/decouvrir" onClick={handleClose}>Nous Découvrir</Link>
