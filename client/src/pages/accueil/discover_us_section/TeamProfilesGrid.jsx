@@ -2,10 +2,7 @@ import TeamProfileCard from "./TeamProfileCard";
 import { teamProfiles } from "@/data/teamProfiles";
 
 export default function TeamProfilesGrids() {
-	const profileImages = import.meta.glob("/src/assets/image *.png", {
-		eager: true,
-	});
-	const profileImageList = Object.values(profileImages);
+	console.log(teamProfiles);
 
 	return (
 		<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-center justify-items-center'>
