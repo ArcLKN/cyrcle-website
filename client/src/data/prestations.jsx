@@ -2,6 +2,7 @@ export const prestations = [
 	{
 		id: "design_industriel",
 		title: "DESIGN INDUSTRIEL",
+		label: "Design Industriel",
 		skills: [
 			"Sketches",
 			"3DS Max",
@@ -23,6 +24,7 @@ export const prestations = [
 	{
 		id: "identite_de_marque",
 		title: "IDENTITÉ DE MARQUE",
+		label: "Identité de marque",
 		skills: ["Typographie", "Graphisme", "Adobe", "Branding", "Figma"],
 		description:
 			"Nous vous accompagnons dans la création et le développement de l'identité de votre marque, reflétant votre personnalité et votre connexion au monde",
@@ -30,6 +32,7 @@ export const prestations = [
 	{
 		id: "developpement_web",
 		title: "DÉVELOPPEMENT WEB",
+		label: "Développement web",
 		skills: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
 		description:
 			"Nous mettons en œuvre nos compétences en informatique et en design, alliant créativité et fonctionnalité, au service du site web de votre entreprise.",
@@ -45,6 +48,7 @@ export const prestations = [
 	{
 		id: "strategie_experience",
 		title: "STRATÉGIE D'EXPÉRIENCE",
+		label: "Stratégie d'expérience",
 		skills: [
 			"Observation",
 			"Persona",
@@ -68,6 +72,7 @@ export const prestations = [
 	{
 		id: "design_espace",
 		title: "DESIGN D'ESPACE",
+		label: "Design d'espace",
 		skills: [
 			"Maquette d'objet",
 			"Sketches",
@@ -90,6 +95,7 @@ export const prestations = [
 	{
 		id: "design_evenementiel",
 		title: "DESIGN ÉVÉNEMENTIEL",
+		label: "Stratégie Événementiel",
 		skills: [
 			"Adobe",
 			"Graphisme",
@@ -112,6 +118,7 @@ export const prestations = [
 	{
 		id: "workshop",
 		title: "WORKSHOP",
+		label: "Workshop",
 		skills: [
 			"Design Thinking",
 			"Facilitation Graphique",
@@ -134,6 +141,7 @@ export const prestations = [
 	{
 		id: "data_management",
 		title: "DATA MANAGEMENT",
+		label: "Data management",
 		skills: [
 			"Commandes UNIX",
 			"Excel",

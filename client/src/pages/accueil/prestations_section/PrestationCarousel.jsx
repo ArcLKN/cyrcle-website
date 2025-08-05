@@ -4,45 +4,9 @@ import {
 	CarouselItem,
 } from "@/components/ui/carousel";
 import { PrestationCarouselItem } from "./PrestationCarouselItem";
+import { prestations } from "@/data/prestations";
 
 export default function PrestationCarousel() {
-
-	const sectionData = [
-		{
-			sectionId: "identite_de_marque",
-			label: "Identité de marque",
-		},
-		{
-			sectionId: "developpement_web",
-			label: "Développement web",
-		},
-		{
-			sectionId: "strategie_experience",
-			label: "Stratégie d'expérience",
-		},
-		{
-			sectionId: "design_espace",
-			label: "Design d'espace",
-		},
-		{
-			sectionId: "strategie_evenementiel",
-			label: "Stratégie Événementiel",
-		},
-		{
-			sectionId: "workshop",
-			label: "Workshop",
-		},
-		{
-			sectionId: "data_management",
-			label: "Data management",
-		},
-		{
-			sectionId: "design_industriel",
-			label: "Design Industriel",
-		}
-	];
-
-
 	return (
 		<Carousel
 			className='-translate-x-16 md:-translate-x-32 w-[125%]'
@@ -51,18 +15,18 @@ export default function PrestationCarousel() {
 			}}
 		>
 			<CarouselContent className='mx-16 xs:mx-24 sm:mx-36 md:mx-48 lg:mx-32'>
-				{sectionData.map(({ sectionId, label }, index) => {
+				{prestations.map(({ id, label }, index) => {
 					const position =
 						index === 0
 							? "left"
-							: index === sectionData.length - 1
-								? "right"
-								: "middle";
+							: index === prestations.length - 1
+							? "right"
+							: "middle";
 
 					return (
 						<PrestationCarouselItem
-							key={sectionId}
-							sectionId={sectionId}
+							key={id}
+							sectionId={id}
 							label={label}
 							position={position}
 						/>
@@ -71,5 +35,5 @@ export default function PrestationCarousel() {
 				<CarouselItem className='basis-1/4'></CarouselItem>
 			</CarouselContent>
 		</Carousel>
-	)
+	);
 }
