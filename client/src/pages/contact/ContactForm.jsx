@@ -46,23 +46,29 @@ export default function ContactForm() {
         setSubmitStatus(null);
 
         try {
-            const response = await fetch("http://localhost:3001/api/email", {
+            // Build FormData for Web3Forms
+            const formData = new FormData();
+            Object.entries(data).forEach(([key, value]) => {
+                formData.append(key, value);
+            });
+
+            // Add your Web3Forms access key here
+            formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
+
+            const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
+                body: formData
             });
 
             const result = await response.json();
 
-            if (response.ok) {
+            if (result.success) {
                 setSubmitStatus({ type: 'success', message: 'Message envoyé avec succès !' });
                 reset(); // Reset form after successful submission
             } else {
                 setSubmitStatus({
                     type: 'error',
-                    message: result.error || 'Une erreur est survenue lors de l\'envoi.'
+                    message: result.message || 'Une erreur est survenue lors de l\'envoi.'
                 });
             }
         } catch (err) {
