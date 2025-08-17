@@ -46,16 +46,13 @@ export default function ContactForm() {
         setSubmitStatus(null);
 
         try {
-            // Build FormData for Web3Forms
             const formData = new FormData();
             Object.entries(data).forEach(([key, value]) => {
                 formData.append(key, value);
             });
 
-            // Add your Web3Forms access key here
-            formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
-
-            const response = await fetch("https://api.web3forms.com/submit", {
+            // Send form data to your Cloudflare function
+            const response = await fetch("/submit", {  // '/submit' is your function endpoint
                 method: "POST",
                 body: formData
             });
@@ -64,7 +61,7 @@ export default function ContactForm() {
 
             if (result.success) {
                 setSubmitStatus({ type: 'success', message: 'Message envoyé avec succès !' });
-                reset(); // Reset form after successful submission
+                reset(); // Reset form after success
             } else {
                 setSubmitStatus({
                     type: 'error',
@@ -81,6 +78,7 @@ export default function ContactForm() {
             setIsSubmitting(false);
         }
     };
+
 
     return (
         <div className="space-y-6">
