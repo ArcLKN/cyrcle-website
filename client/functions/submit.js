@@ -1,22 +1,35 @@
 export async function onRequestPost(context) {
   const data = await context.request.formData();
+  data.append("access_key", context.env.VITE_WEB3FORMS_KEY);
 
-  const dataToSend = new FormData();
-  dataToSend.append("access_key", "1e4dc2df-1659-4610-9c21-63cb83781d2a");
-  dataToSend.append("name", "test 1");
-  dataToSend.append("email", "raphaelgreiner0@gmail.com");
-  dataToSend.append("message", "test 2");
-  dataToSend.append("subject", "test 3");
+  let result;
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: data,
+    });
 
-  const response = await fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    body: dataToSend,
-  });
+    // Try parsing JSON, fallback to text
+    try {
+      result = await response.json();
+    } catch {
+      const text = await response.text();
+      result = { success: false, message: text };
+    }
 
-  const result = await response.json();
+    return new Response(JSON.stringify(result), {
+      status: response.status,
+      headers: { "Content-Type": "application/json" },
+    });
 
-  return new Response(JSON.stringify(result), {
-    status: response.status,
-    headers: { "Content-Type": "application/json" },
-  });
+  } catch (err) {
+    console.error("Fetch error:", err);
+    return new Response(JSON.stringify({
+      success: false,
+      message: "Could not reach Web3Forms"
+    }), {
+      headers: { "Content-Type": "application/json" },
+      status: 500
+    });
+  }
 }
