@@ -11,7 +11,7 @@ export async function onRequestPost(context) {
     headers: {
      'Content-Type': 'application/json',
    },
-    body: JSON.stringify(data),
+    body: data,
   });
 
   // Return the Web3Forms response
