@@ -5,6 +5,8 @@ export async function onRequestPost(context) {
   // Add your secret key (stored in Cloudflare environment variables)
   data.append("access_key", context.env.VITE_WEB3FORMS_KEY);
 
+  console.log(data)
+
   // Send the form to Web3Forms
   const response = await fetch('https://api.web3forms.com/submit', {
     method: "POST",
