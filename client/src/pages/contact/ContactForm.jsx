@@ -22,7 +22,7 @@ const COMPANY_TYPES = [
 
 export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState(null);
+    const [result, setResult] = useState("");
 
     const {
         register,
@@ -41,53 +41,37 @@ export default function ContactForm() {
         }
     });
 
-    const onSubmit = async (data) => {
+    const onSubmit = async (event) => {
         setIsSubmitting(true);
-        setSubmitStatus(null);
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
 
-        try {
-            const response = await fetch("http://localhost:3001/api/email", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            });
+        formData.append("access_key", "af31ff0a-59b8-46d7-b992-21493f9f3dd9");
 
-            const result = await response.json();
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
 
-            if (response.ok) {
-                setSubmitStatus({ type: 'success', message: 'Message envoyé avec succès !' });
-                reset(); // Reset form after successful submission
-            } else {
-                setSubmitStatus({
-                    type: 'error',
-                    message: result.error || 'Une erreur est survenue lors de l\'envoi.'
-                });
-            }
-        } catch (err) {
-            console.error('Form submission error:', err);
-            setSubmitStatus({
-                type: 'error',
-                message: 'Erreur de connexion. Veuillez réessayer.'
-            });
-        } finally {
-            setIsSubmitting(false);
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
         }
+
+        setIsSubmitting(false);
     };
+
 
     return (
         <div className="space-y-6">
-            {submitStatus && (
-                <Alert variant={submitStatus.type === 'error' ? 'destructive' : 'default'}>
-                    <AlertDescription>
-                        {submitStatus.type === 'success' ? '✓ ' : '⚠ '}
-                        {submitStatus.message}
-                    </AlertDescription>
-                </Alert>
-            )}
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={onSubmit} className="space-y-6">
                 {/* Name field */}
                 <div className="space-y-2">
                     <Label htmlFor="nom">
