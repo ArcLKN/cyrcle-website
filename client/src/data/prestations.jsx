@@ -1,3 +1,18 @@
+// prestations.jsx
+// ✅ Import all images from /src/assets/prestations/
+import designIndustrielWhite from "../assets/prestations/image_design_industriel_white.png";
+import designIndustrielBlack from "../assets/prestations/image_design_industriel_black.png";
+import developpementWebGray from "../assets/prestations/image_developpement_web_gray.png";
+import strategieExperienceGray from "../assets/prestations/image_strategie_experience_gray.png";
+import designEspaceWhite from "../assets/prestations/image_design_espace_white.png";
+import designEspaceBlack from "../assets/prestations/image_design_espace_black.png";
+import designEvenementielWhite from "../assets/prestations/image_design_evenementiel_white.png";
+import designEvenementielBlack from "../assets/prestations/image_design_evenementiel_black.png";
+import workshopWhite from "../assets/prestations/image_workshop_white.png";
+import workshopBlack from "../assets/prestations/image_workshop_black.png";
+import dataManagementWhite from "../assets/prestations/image_data_management_white.png";
+import dataManagementBlack from "../assets/prestations/image_data_management_black.png";
+
 export const prestations = [
 	{
 		id: "design_industriel",
@@ -13,8 +28,8 @@ export const prestations = [
 		description:
 			"Nous vous aidons à transformer vos idées en un produit innovant et ce, jusqu'à sa fabrication artisanale. Notre savoir-faire permet d'unir esthétique et fonctionnalité, tout en étant attaché aux enjeux du 21è siècle.",
 		image: {
-			white: "/images/prestations/image_design_industriel_white.png",
-			black: "/images/prestations/image_design_industriel_black.png",
+			white: designIndustrielWhite,
+			black: designIndustrielBlack,
 			parameters: {
 				alt: "Design Industriel Image",
 				className: "-translate-y-24 bottom-0",
@@ -37,7 +52,7 @@ export const prestations = [
 		description:
 			"Nous mettons en œuvre nos compétences en informatique et en design, alliant créativité et fonctionnalité, au service du site web de votre entreprise.",
 		image: {
-			gray: "/images/prestations/image_developpement_web_gray.png",
+			gray: developpementWebGray,
 			parameters: {
 				alt: "Développement Web Image",
 				className:
@@ -61,7 +76,7 @@ export const prestations = [
 		description:
 			"Nous vous assistons dans la recherche et l'optimisation de l'expérience utilisateur, pour ainsi développer la solution la plus pertinente face aux enjeux de vos clients.",
 		image: {
-			gray: "/images/prestations/image_strategie_experience_gray.png",
+			gray: strategieExperienceGray,
 			parameters: {
 				alt: "Stratégie Expérience Image",
 				className:
@@ -83,8 +98,8 @@ export const prestations = [
 		description:
 			"Nous vous aidons à imaginer des espaces qui favorisent les interactions et enrichissent la vie quotidienne des utilisateurs.",
 		image: {
-			white: "/images/prestations/image_design_espace_white.png",
-			black: "/images/prestations/image_design_espace_black.png",
+			white: designEspaceWhite,
+			black: designEspaceBlack,
 			parameters: {
 				alt: "Design Espace Image",
 				className:
@@ -106,8 +121,8 @@ export const prestations = [
 		description:
 			"Nous vous épaulons dans la conception et la gestion de vos événements pour garantir une expérience immersive et marquante pour les utilisateurs.",
 		image: {
-			white: "/images/prestations/image_design_evenementiel_white.png",
-			black: "/images/prestations/image_design_evenementiel_black.png",
+			white: designEvenementielWhite,
+			black: designEvenementielBlack,
 			parameters: {
 				alt: "Design Évènementiel Image",
 				className:
@@ -129,8 +144,8 @@ export const prestations = [
 		description:
 			"Nous organisons des ateliers de workshop en interne pour dévoiler à votre équipe le pouvoir du design.",
 		image: {
-			white: "/images/prestations/image_workshop_white.png",
-			black: "/images/prestations/image_workshop_black.png",
+			white: workshopWhite,
+			black: workshopBlack,
 			parameters: {
 				alt: "Workshop Image",
 				className:
@@ -152,8 +167,8 @@ export const prestations = [
 		description:
 			"Nous proposons des services de tri et d'organisation de données, pour des bases de données fiables et plus accessibles.",
 		image: {
-			white: "/images/prestations/image_data_management_white.png",
-			black: "/images/prestations/image_data_management_black.png",
+			white: dataManagementWhite,
+			black: dataManagementBlack,
 			parameters: {
 				alt: "Design Espace Image",
 				className:
